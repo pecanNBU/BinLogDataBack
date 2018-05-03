@@ -30,8 +30,7 @@ public class Demo {
     private static String ACCESS_KEY_ID = "LTAIAfBoz0Wz5O6L";
     private static String ACCESS_SECRET = "WGlWEscL3u5rfFrokhYle4jFXsXBv9";
     private static String REGEX_PATTERN = "(mysql)(.*)(tar)";
-    private static String SAVE_PAHT = "/Users/personalc/project/binlogfiles";
-    private static int HTTP_CONNECTION_TIMEOUT = 10 * 1000;
+    private static String SAVE_PATH = "/Users/personalc/project/binlogfiles";
     private static String DB_INSTANCE_ID = "rm-bp11gox03jgt2ullb";
     private static String BINLOG_ACTION_NAME = "DescribeBinlogFiles";
 
@@ -51,9 +50,6 @@ public class Demo {
         binlogFilesRequest.setStartTime("2018-04-01T17:00:00Z");
         binlogFilesRequest.setEndTime("2018-05-03T15:00:00Z");
         DescribeBinlogFilesResponse binlogFilesResponse;
-        String downloadLink;
-        String hostInstanceID;
-        String linkExpiredTime;
         int totalRecordCount;
         int PageNumber;
         int PageRecordCount;
@@ -61,9 +57,7 @@ public class Demo {
             binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
             totalRecordCount = binlogFilesResponse.getTotalRecordCount();
             System.out.println("totalRecordCount: " + totalRecordCount);
-
-            List<BinLogFile> linkList = new ArrayList<BinLogFile>(totalRecordCount);
-
+            List<BinLogFile> linkList = new ArrayList<>(totalRecordCount);
             PageNumber = binlogFilesResponse.getPageNumber();
             System.out.println("PageNumber: " + PageNumber);
             for (int i = 1; i < PageNumber; i++) {
@@ -74,97 +68,19 @@ public class Demo {
                 List<BinLogFile> items = binlogFilesResponse.getItems();
                 linkList.addAll(items);
             }
-
-            String fileName;
+            // TODO: 2018/5/3 记得增加检查数据文件完整性 
             linkList.stream().filter(binLogFile -> binLogFile.getHostInstanceID().equals("3691577")).forEach(binLogFile ->
             {
                 try {
                     FileUtils.copyURLToFile(new URL(binLogFile.getDownloadLink()),
-                            new File(SAVE_PAHT + File.separator + binLogFile.getHostInstanceID() + "-" + getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN)));
+                            new File(SAVE_PATH + File.separator + binLogFile.getHostInstanceID() + "-" + getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN)));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             });
-            /*int size = linkList.size();
-            for (int j = 0; j < size; j++) {
-                System.out.println("当前文件数：" + j);
-                BinLogFile binLogFile = linkList.get(j);
-                downloadLink = binLogFile.getDownloadLink();
-                System.out.println("downloadLink: " + downloadLink);
-                hostInstanceID = binLogFile.getHostInstanceID();
-                System.out.println("hostInstanceID: " + hostInstanceID);
-                linkExpiredTime = binLogFile.getLinkExpiredTime();
-                System.out.println("linkExpiredTime: " + linkExpiredTime);
-                fileName = hostInstanceID + "-" + getFileNameFromUrl(downloadLink, REGEX_PATTERN);
-                System.out.println("文件名：" + fileName);
-                try {
-                    //downLoadFromUrl(downloadLink, fileName, SAVE_PAHT);
-                    File file = new File(SAVE_PAHT + File.separator + fileName);
-                    FileUtils.copyURLToFile(new URL(downloadLink), file);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }*/
         } catch (ClientException e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * 从网络Url中下载文件
-     *
-     * @param urlStr
-     * @param fileName
-     * @param savePath
-     * @throws IOException
-     */
-    public static void downLoadFromUrl(String urlStr, String fileName, String savePath) throws IOException {
-        URL url = new URL(urlStr);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        //设置超时间为3秒
-        conn.setConnectTimeout(HTTP_CONNECTION_TIMEOUT);
-        //防止屏蔽程序抓取而返回403错误
-        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36");
-
-        //得到输入流
-        InputStream inputStream = conn.getInputStream();
-        //获取自己数组
-        byte[] getData = readInputStream(inputStream);
-
-        //文件保存位置
-        File saveDir = new File(savePath);
-        if (!saveDir.exists()) {
-            saveDir.mkdir();
-        }
-        File file = new File(saveDir + File.separator + fileName);
-        FileOutputStream fos = new FileOutputStream(file);
-        fos.write(getData);
-        if (fos != null) {
-            fos.close();
-        }
-        if (inputStream != null) {
-            inputStream.close();
-        }
-        System.out.println("info:" + url + " download success");
-
-    }
-
-    /**
-     * 从输入流中获取字节数组
-     *
-     * @param inputStream
-     * @return
-     * @throws IOException
-     */
-    public static byte[] readInputStream(InputStream inputStream) throws IOException {
-        byte[] buffer = new byte[1024];
-        int len;
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        while ((len = inputStream.read(buffer)) != -1) {
-            bos.write(buffer, 0, len);
-        }
-        bos.close();
-        return bos.toByteArray();
     }
 
     /**
@@ -174,7 +90,7 @@ public class Demo {
      * @param regexStr 文件名正则表达式
      * @return 文件名
      */
-    public static String getFileNameFromUrl(String link, String regexStr) {
+    private static String getFileNameFromUrl(String link, String regexStr) {
         String fileName = null;
         Pattern pattern = Pattern.compile(regexStr);
         Matcher matcher = pattern.matcher(link);
