@@ -1,0 +1,5 @@
+com/treefinance/binlog/util/TarUtil.class
+com/treefinance/binlog/process/BinLogDownLoad.class
+com/treefinance/binlog/util/DownLoadUtil.class
+com/treefinance/binlog/util/FileUtil.class
+com/treefinance/binlog/util/PropertiesUtil.class

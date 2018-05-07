@@ -23,8 +23,8 @@ import static com.aliyuncs.http.FormatType.JSON;
 
 import org.apache.log4j.Logger;
 
-public class Demo2 {
-    private static Logger LOG = Logger.getLogger(Demo2.class);
+public class Demo {
+    private static Logger LOG = Logger.getLogger(Demo.class);
     private static String Region_ID = "cn-hangzhou";
     private static String ACCESS_KEY_ID = "LTAIAfBoz0Wz5O6L";
     private static String ACCESS_SECRET = "WGlWEscL3u5rfFrokhYle4jFXsXBv9";

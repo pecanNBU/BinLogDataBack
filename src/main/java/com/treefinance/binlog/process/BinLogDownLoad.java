@@ -1,10 +1,14 @@
+package com.treefinance.binlog.process;
+
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
@@ -13,23 +17,26 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesRequest;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesResponse;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesResponse.BinLogFile;
+import com.treefinance.binlog.util.PropertiesUtil;
 import org.apache.commons.io.FileUtils;
 
 import static com.aliyuncs.http.FormatType.JSON;
 
 import org.apache.log4j.Logger;
 
-public class Demo {
-    private static Logger LOG = Logger.getLogger(Demo.class);
-    private static final String REGION_ID = "cn-hangzhou";
-    private static final String ACCESS_KEY_ID = "LTAIAfBoz0Wz5O6L";
-    private static final String ACCESS_SECRET = "WGlWEscL3u5rfFrokhYle4jFXsXBv9";
-    private static final String REGEX_PATTERN = "(mysql-bin\\.)(.*)(\\.tar)";
-    private static final String SAVE_PATH = "/Users/personalc/project/binlogfiles";
-    private static final String DB_INSTANCE_ID = "rm-bp11gox03jgt2ullb";
-    private static final String BINLOG_ACTION_NAME = "DescribeBinlogFiles";
-    private static final int PAGE_SIZE = 30;
-    private static final String INSTANCE_ID = "3691577";
+public class BinLogDownLoad {
+    private static Logger LOG = Logger.getLogger(BinLogDownLoad.class);
+    private static Properties properties = PropertiesUtil.getProperties();
+    private static final String REGION_ID = properties.getProperty("REGION_ID");
+    private static final String ACCESS_KEY_ID = properties.getProperty("ACCESS_KEY_ID");
+    private static final String ACCESS_SECRET = properties.getProperty("ACCESS_SECRET");
+    private static final String REGEX_PATTERN = properties.getProperty("REGEX_PATTERN");
+    private static final String SAVE_PATH = properties.getProperty("SAVE_PATH");
+    private static final String DB_INSTANCE_ID = properties.getProperty("DB_INSTANCE_ID");
+    private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
+    private static final int PAGE_SIZE = Integer.valueOf(properties.getProperty("PAGE_SIZE"));
+    private static final String INSTANCE_ID = properties.getProperty("INSTANCE_ID");
+
 
     public static void main(String[] args) {
         // 创建DefaultAcsClient实例并初始化
@@ -53,37 +60,41 @@ public class Demo {
         try {
             binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
             totalRecordCount = binlogFilesResponse.getTotalRecordCount();
-            System.out.println("totalRecordCount: " + totalRecordCount);
+            LOG.info("totalRecordCount: " + totalRecordCount);
             List<BinLogFile> binLogFiles = new ArrayList<>(totalRecordCount);
             pageCount = (int) Math.ceil((double) totalRecordCount / PAGE_SIZE);
-            System.out.println("pageCount: " + pageCount);
+            LOG.info("pageCount: " + pageCount);
             for (int i = 1; i <= pageCount; i++) {
                 binlogFilesRequest.setPageNumber(i);
                 binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
                 pageRecordCount = binlogFilesResponse.getPageRecordCount();
-                System.out.println("PageRecordCount: " + pageRecordCount);
+                LOG.info("PageRecordCount: " + pageRecordCount);
                 List<BinLogFile> items = binlogFilesResponse.getItems();
                 binLogFiles.addAll(items);
             }
             List<Integer> fileNumList = getFileNumberFromUrl(binLogFiles);
-            long instanceLogSize = binLogFiles.stream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).count();
+            Stream<BinLogFile> filterBinLog = binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID));
+            long instanceLogSize = filterBinLog.count();
             int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
             if ((maxDiff + 1) == instanceLogSize) {
-                binLogFiles.parallelStream().forEach(binLogFile ->
+                binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile ->
                 {
                     try {
-                        LOG.info("begin download binlog file :"+binLogFile.getDownloadLink());
+                        LOG.info("file size: " + binLogFile.getFileSize());
+                        LOG.info("checksum: " + binLogFile.getChecksum());
+                        LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
                         FileUtils.copyURLToFile(new URL(binLogFile.getDownloadLink()),
                                 new File(SAVE_PATH + File.separator + binLogFile.getHostInstanceID() + "-" + getFileNameFromUrl(binLogFile.getDownloadLink())));
+                        LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        LOG.info("download binlog file :" + "[ " + binLogFile.getDownloadLink() + "] failed with exception " + e.getMessage());
                     }
                 });
             } else {
                 LOG.info("the downloaded binlog files is not complete");
             }
         } catch (ClientException e) {
-            e.printStackTrace();
+            LOG.info("download binlog files from aliyun failed with exception " + e.getMessage());
         }
     }
 
@@ -95,7 +106,7 @@ public class Demo {
      */
     private static String getFileNameFromUrl(String link) {
         String fileName = null;
-        Pattern pattern = Pattern.compile(Demo.REGEX_PATTERN);
+        Pattern pattern = Pattern.compile(BinLogDownLoad.REGEX_PATTERN);
         Matcher matcher = pattern.matcher(link);
         if (matcher.find()) {
             fileName = matcher.group();
