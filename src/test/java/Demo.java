@@ -79,9 +79,9 @@ public class Demo {
                 fileName = hostInstanceID + "-" + getFileNameFromUrl(downloadLink, REGEX_PATTERN);
                 System.out.println("文件名：" + fileName);
                 try {
-                    //downLoadFromUrl(downloadLink, fileName, SAVE_PAHT);
-                    File file = new File(SAVE_PAHT + File.separator + fileName);
-                    FileUtils.copyURLToFile(new URL(downloadLink), file);
+                    downLoadFromUrl(downloadLink, fileName, SAVE_PAHT);
+                    //File file = new File(SAVE_PAHT + File.separator + fileName);
+                    //FileUtils.copyURLToFile(new URL(downloadLink), file);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

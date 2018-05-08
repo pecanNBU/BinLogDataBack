@@ -24,6 +24,9 @@ import static com.aliyuncs.http.FormatType.JSON;
 
 import org.apache.log4j.Logger;
 
+/**
+ * 根据条件下载指定实例binlog文件
+ */
 public class BinLogDownLoad {
     private static Logger LOG = Logger.getLogger(BinLogDownLoad.class);
     private static Properties properties = PropertiesUtil.getProperties();
@@ -36,6 +39,8 @@ public class BinLogDownLoad {
     private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
     private static final int PAGE_SIZE = Integer.valueOf(properties.getProperty("PAGE_SIZE"));
     private static final String INSTANCE_ID = properties.getProperty("INSTANCE_ID");
+    private static final String START_TIME = properties.getProperty("START_TIME");
+    private static final String END_TIME = properties.getProperty("END_TIME");
 
 
     public static void main(String[] args) {
@@ -51,52 +56,34 @@ public class BinLogDownLoad {
         binlogFilesRequest.setAcceptFormat(JSON);
         binlogFilesRequest.setActionName(BINLOG_ACTION_NAME);
         binlogFilesRequest.setDBInstanceId(DB_INSTANCE_ID);
-        binlogFilesRequest.setStartTime("2018-04-01T17:00:00Z");
-        binlogFilesRequest.setEndTime("2018-05-03T15:00:00Z");
-        DescribeBinlogFilesResponse binlogFilesResponse;
-        int totalRecordCount;
-        int pageCount;
-        int pageRecordCount;
-        try {
-            binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
-            totalRecordCount = binlogFilesResponse.getTotalRecordCount();
-            LOG.info("totalRecordCount: " + totalRecordCount);
-            List<BinLogFile> binLogFiles = new ArrayList<>(totalRecordCount);
-            pageCount = (int) Math.ceil((double) totalRecordCount / PAGE_SIZE);
-            LOG.info("pageCount: " + pageCount);
-            for (int i = 1; i <= pageCount; i++) {
-                binlogFilesRequest.setPageNumber(i);
-                binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
-                pageRecordCount = binlogFilesResponse.getPageRecordCount();
-                LOG.info("PageRecordCount: " + pageRecordCount);
-                List<BinLogFile> items = binlogFilesResponse.getItems();
-                binLogFiles.addAll(items);
-            }
-            List<Integer> fileNumList = getFileNumberFromUrl(binLogFiles);
-            Stream<BinLogFile> filterBinLog = binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID));
-            long instanceLogSize = filterBinLog.count();
-            int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
-            if ((maxDiff + 1) == instanceLogSize) {
-                binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile ->
-                {
-                    try {
-                        LOG.info("file size: " + binLogFile.getFileSize());
-                        LOG.info("checksum: " + binLogFile.getChecksum());
-                        LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
-                        FileUtils.copyURLToFile(new URL(binLogFile.getDownloadLink()),
-                                new File(SAVE_PATH + File.separator + binLogFile.getHostInstanceID() + "-" + getFileNameFromUrl(binLogFile.getDownloadLink())));
-                        LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
-                    } catch (IOException e) {
-                        LOG.info("download binlog file :" + "[ " + binLogFile.getDownloadLink() + "] failed with exception " + e.getMessage());
-                    }
-                });
-            } else {
-                LOG.info("the downloaded binlog files is not complete");
-            }
-        } catch (ClientException e) {
-            LOG.info("download binlog files from aliyun failed with exception " + e.getMessage());
+        binlogFilesRequest.setStartTime(START_TIME);
+        binlogFilesRequest.setEndTime(END_TIME);
+        List<BinLogFile> binLogFiles = getBinLogFiles(client, binlogFilesRequest, profile);
+        saveUrlToText(binLogFiles,SAVE_PATH+File.separator+"downLink.txt");
+        List<Integer> fileNumList = getFileNumberFromUrl(binLogFiles);
+        Stream<BinLogFile> filterBinLog = binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID));
+        long instanceLogSize = filterBinLog.count();
+        //判断文件编号是否连续
+        int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
+        if (instanceLogSize == (maxDiff + 1)) {
+            binLogFiles.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile ->
+            {
+                try {
+                    LOG.info("file size: " + binLogFile.getFileSize());
+                    LOG.info("checksum: " + binLogFile.getChecksum());
+                    LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
+                    FileUtils.copyURLToFile(new URL(binLogFile.getDownloadLink()),
+                            new File(SAVE_PATH + File.separator + binLogFile.getHostInstanceID() + "-" + getFileNameFromUrl(binLogFile.getDownloadLink())));
+                    LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
+                } catch (IOException e) {
+                    LOG.info("download binlog file :" + "[ " + binLogFile.getDownloadLink() + "] failed with exception " + e.getMessage());
+                }
+            });
+        } else {
+            LOG.info("the downloaded binlog files is not complete");
         }
     }
+
 
     /**
      * 从URL中解析下载的文件名
@@ -132,5 +119,69 @@ public class BinLogDownLoad {
                 .sorted()
                 .distinct()
                 .collect(Collectors.toList());
+    }
+
+    private static List<BinLogFile> getBinLogFiles(IAcsClient client, DescribeBinlogFilesRequest binlogFilesRequest, DefaultProfile profile) {
+        DescribeBinlogFilesResponse binlogFilesResponse = null;
+        try {
+            binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }
+        int totalRecordCount = 0;
+        if (binlogFilesResponse != null) {
+            totalRecordCount = binlogFilesResponse.getTotalRecordCount();
+        }
+        LOG.info("totalRecordCount: " + totalRecordCount);
+        List<BinLogFile> binLogFiles = new ArrayList<>(totalRecordCount);
+        int pageCount = (int) Math.ceil(totalRecordCount / PAGE_SIZE);
+        LOG.info("pageCount: " + pageCount);
+        for (int i = 1; i <= pageCount; i++) {
+            binlogFilesRequest.setPageNumber(i);
+            try {
+                binlogFilesResponse = client.getAcsResponse(binlogFilesRequest, profile);
+            } catch (ClientException e) {
+                e.printStackTrace();
+            }
+            int pageRecordCount = 0;
+            if (binlogFilesResponse != null) {
+                pageRecordCount = binlogFilesResponse.getPageRecordCount();
+            }
+            LOG.info("PageRecordCount: " + pageRecordCount);
+            List<BinLogFile> items = binlogFilesResponse.getItems();
+            binLogFiles.addAll(items);
+        }
+        return binLogFiles;
+    }
+
+    /**
+     * 将binlog downloadLink 保存到filePath
+     * @param binLogFiles 一批binlog文件
+     * @param filePath 保存文件路径
+     */
+    private static void saveUrlToText(List<BinLogFile> binLogFiles,String filePath) {
+        OutputStream fou = null;
+        try {
+           fou=new FileOutputStream(new File(filePath));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        for (BinLogFile binLogFile:binLogFiles){
+            String downLoadLink=binLogFile.getDownloadLink();
+            try {
+                if (fou != null) {
+                    fou.write((downLoadLink+"\n").getBytes());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (fou!=null){
+            try {
+                fou.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

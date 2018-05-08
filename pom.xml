@@ -12,9 +12,9 @@
             <resource>
                 <targetPath>${project.build.defaultGoal}/classes</targetPath>
                 <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>*.properties</exclude>
-                </excludes>
+                <includes>
+                    <include>*.properties</include>
+                </includes>
             </resource>
         </resources>
         <plugins>

@@ -3,3 +3,4 @@
 /Users/personalc/project/BinLogProcess/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java
 /Users/personalc/project/BinLogProcess/src/main/java/com/treefinance/binlog/util/FileUtil.java
 /Users/personalc/project/BinLogProcess/src/main/java/com/treefinance/binlog/util/DownLoadUtil.java
+/Users/personalc/project/BinLogProcess/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java
