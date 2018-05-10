@@ -7,6 +7,10 @@
     <groupId>com.tf</groupId>
     <artifactId>BinLogProcess</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <log4j.version>1.2.17</log4j.version>
+        <hadoop.version>2.7.2</hadoop.version>
+    </properties>
     <build>
         <resources>
             <resource>
@@ -68,13 +72,13 @@
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <version>${log4j.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
-            <version>1.3.2</version>
-        </dependency>
+            <version>2.4</version>
+        </dependency>-->
         <dependency>
             <groupId>javatar</groupId>
             <artifactId>javatar</artifactId>
@@ -84,6 +88,16 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
             <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 </project>

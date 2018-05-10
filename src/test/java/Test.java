@@ -1,9 +1,11 @@
 
 
-import com.treefinance.binlog.util.TarUtil;
+import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse;
+import com.treefinance.binlog.util.DBInstanceUtil;
 
-import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,10 +19,12 @@ public class Test {
         {
             System.out.println(m.group(1));
         }*/
-        try {
+       /* try {
             TarUtil.decompress("/Users/personalc/project/binlogfiles/3691577-mysql-bin.000610.tar",new File("/Users/personalc/project/3691577-mysql-bin.000610"));
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+        List<DescribeDBInstancesResponse.DBInstance> instances=DBInstanceUtil.getAllPrimaryDBInstance();
+
     }
 }

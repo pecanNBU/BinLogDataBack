@@ -10,8 +10,5 @@
         <module name="BinlogProcess" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="BinLogProcess" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

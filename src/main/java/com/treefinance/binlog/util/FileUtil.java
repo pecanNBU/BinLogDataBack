@@ -3,7 +3,10 @@ package com.treefinance.binlog.util;
 import org.apache.log4j.Logger;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.Properties;
 
 public class FileUtil {
     private static Logger LOG = Logger.getLogger(FileUtil.class);
@@ -27,5 +30,15 @@ public class FileUtil {
             LOG.error("The file name is not valid!");
         }
         return null;
+    }
+    public static Properties getProperties() {
+        Properties ps = new Properties();
+        try {
+            InputStream is = new FileInputStream(loadResourceFile("instance.properties"));
+            ps.load(is);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ps;
     }
 }
