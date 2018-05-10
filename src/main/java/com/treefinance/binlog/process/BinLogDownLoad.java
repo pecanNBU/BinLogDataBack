@@ -15,7 +15,6 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Stream;
@@ -34,7 +33,7 @@ public class BinLogDownLoad {
     private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
     private static final String START_TIME = properties.getProperty("START_TIME");
     private static final String END_TIME = properties.getProperty("END_TIME");
-    private static String INSTANCE_ID;
+    private static String INSTANCE_ID = null;
 
 
     public static void main(String[] args) {
@@ -68,7 +67,6 @@ public class BinLogDownLoad {
                     {
                         try {
                             LOG.info("file size: " + binLogFile.getFileSize());
-                            LOG.info("checksum: " + binLogFile.getChecksum());
                             LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
                             FileUtils.copyURLToFile(new URL(binLogFile.getDownloadLink()),
                                     new File(SAVE_PATH

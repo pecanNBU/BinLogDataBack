@@ -5,23 +5,43 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 
 import java.io.IOException;
+import java.net.URI;
 
 public class HDFSFileUtil {
+    public static Configuration configuration = null;
+    public static FileSystem fileSystem = null;
+    public static String hdfsPath=null;
+
+    static {
+        try {
+            if (null == configuration) {
+                configuration = new Configuration();
+            }
+            if (null == fileSystem) {
+                fileSystem = FileSystem.get(URI.create(hdfsPath), configuration);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * 文件上传
      *
-     * @param src 本地路径
-     * @param dst HDFS路径
+     * @param src  本地路径
+     * @param des  HDFS路径
      * @param conf HDFS配置
      * @return 上传是否成功
      */
-    public static boolean put2HSFS(String src, String dst, Configuration conf) {
-        Path dstPath = new Path(dst);
+    public static boolean put2HSFS(String src, String des, Configuration conf) {
+        Path desPath = new Path(des);
         try {
-            FileSystem hdfs = dstPath.getFileSystem(conf);
+            FileSystem fs = desPath.getFileSystem(conf);
 //          FileSystem hdfs = FileSystem.get( URI.create(dst), conf) ;
-            hdfs.copyFromLocalFile(false, new Path(src), dstPath);
+            fs.copyFromLocalFile(false, new Path(src), desPath);
+            /*FileSystem fs = FileSystem.get(URI.create(des), conf);
+            FSDataOutputStream out = fs.append(new Path(des));*/
+
         } catch (IOException ie) {
             ie.printStackTrace();
             return false;
@@ -32,16 +52,16 @@ public class HDFSFileUtil {
     /**
      * 文件下载
      *
-     * @param src 本地路径
-     * @param dst HDFS路径
+     * @param src  本地路径
+     * @param dst  HDFS路径
      * @param conf HDFS配置
      * @return 下载是否成功
      */
     public static boolean getFromHDFS(String src, String dst, Configuration conf) {
         Path dstPath = new Path(dst);
         try {
-            FileSystem dhfs = dstPath.getFileSystem(conf);
-            dhfs.copyToLocalFile(false, new Path(src), dstPath);
+            FileSystem fs = dstPath.getFileSystem(conf);
+            fs.copyToLocalFile(false, new Path(src), dstPath);
         } catch (IOException ie) {
             ie.printStackTrace();
             return false;
