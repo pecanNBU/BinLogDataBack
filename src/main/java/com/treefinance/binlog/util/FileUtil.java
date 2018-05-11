@@ -9,13 +9,18 @@ import java.util.Properties;
 public class FileUtil {
     private static Logger LOG = Logger.getLogger(FileUtil.class);
     private RandomAccessFile file;
-    private long startPos; // 文件存储的起始位置
 
     private static boolean strIsRight(String str) {
         return null != str && str.length() > 0;
     }
 
-    public static File loadResourceFile(String resourceName) {
+    /**
+     * 加载配置文件
+     *
+     * @param resourceName 配置文件名
+     * @return File
+     */
+    private static File loadResourceFile(String resourceName) {
         if (strIsRight(resourceName)) {
             URL url = ClassLoader.getSystemResource(resourceName);
             if (url != null) {
@@ -31,6 +36,11 @@ public class FileUtil {
         }
         return null;
     }
+
+    /**
+     * 读取配置文件
+     * @return Properties
+     */
     public static Properties getProperties() {
         Properties ps = new Properties();
         try {
@@ -42,20 +52,39 @@ public class FileUtil {
         return ps;
     }
 
+    /**
+     * 设置文件存储开始位置
+     * @param fileName 文件名
+     * @param startPos 文件存储的起始位置
+     */
+    public FileUtil(String fileName, long startPos) {
+        try {
+            file = new RandomAccessFile(fileName, "rw");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
-    public FileUtil(String fileName, long startPos) throws IOException {
-        file = new RandomAccessFile(fileName, "rw");
-        this.startPos = startPos;
-        file.seek(startPos);
+        try {
+            file.seek(startPos);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public synchronized int write(byte[] data, int start, int len){
+    /**
+     * 写数据操作
+     * @param data 字节数组
+     * @param start 开始位置
+     * @param len 结束位置
+     * @return len 表示是否写入成功
+     */
+    public synchronized int write(byte[] data, int start, int len) {
         int res = -1;
         try {
             file.write(data, start, len);
             res = len;
         } catch (IOException e) {
-            LogUtil.log(e.getMessage());
+            LOG.info(e.getMessage());
             e.printStackTrace();
         }
         return res;
