@@ -75,38 +75,30 @@ public class DownFile {
 
         //启动分段下载子线程
 
-        try {
-            fileSplitFetchs = new FileSplitFetch[startPos.length];
+        fileSplitFetchs = new FileSplitFetch[startPos.length];
+        for (int i = 0; i < startPos.length; i++) {
+            System.out.println(startPos[i] + " " + endPos[i]);
+            fileSplitFetchs[i] = new FileSplitFetch(siteInfo.getUrl(), startPos[i], endPos[i], i,
+                    siteInfo.getFilePath() + File.separator + siteInfo.getFileName());
+            LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
+            new Thread(fileSplitFetchs[i]).start();
+        }
+
+        //保存文件下载信息
+        saveInfo();
+        //循环判断所有文件是否下载完毕
+        boolean breakWhile = false;
+        while (!stop) {
+            LogUtil.sleep(5000);
+            breakWhile = true;
             for (int i = 0; i < startPos.length; i++) {
-                System.out.println(startPos[i] + " " + endPos[i]);
-                fileSplitFetchs[i] = new FileSplitFetch(siteInfo.getUrl(), startPos[i], endPos[i], i,
-                        siteInfo.getFilePath() + File.separator + siteInfo.getFileName());
-                LOG.info("Threa " + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-                new Thread(fileSplitFetchs[i]).start();
-            }
-
-            //保存文件下载信息
-            saveInfo();
-            //循环判断所有文件是否下载完毕
-            boolean breakWhile = false;
-            while (!stop) {
-
-                LogUtil.sleep(50);
-                breakWhile = true;
-
-                for (int i = 0; i < startPos.length; i++) {
-                    if (!fileSplitFetchs[i].downOver) {
-                        breakWhile = false; // 还存在未下载完成的线程
-                        break;
-                    }
-                }
-
-                if (breakWhile)
+                if (!fileSplitFetchs[i].downOver) {
+                    breakWhile = false; // 还存在未下载完成的线程
                     break;
+                }
             }
-        } catch (IOException e) {
-            LOG.info(e.getMessage());
-            e.printStackTrace();
+            if (breakWhile)
+                break;
         }
         LOG.info("文件下载完成");
     }
@@ -150,7 +142,7 @@ public class DownFile {
                 return NO_ACCESS; // 代表文件不可访问
             }
 
-            String header = null;
+            String header;
             for (int i = 1; ; i++) {
                 header = connection.getHeaderFieldKey(i);
                 if (header != null) {
@@ -171,6 +163,7 @@ public class DownFile {
         }
 
         LOG.info("文件大小为" + len);
+        System.out.println("file len:" + len);
         return len;
     }
 
@@ -187,7 +180,6 @@ public class DownFile {
                 startPos[i] = input.readLong();
                 endPos[i] = input.readLong();
             }
-
             input.close();
         } catch (FileNotFoundException e) {
             LOG.info(e.getMessage());

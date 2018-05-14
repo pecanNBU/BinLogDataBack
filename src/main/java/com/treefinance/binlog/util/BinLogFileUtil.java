@@ -42,7 +42,7 @@ public class BinLogFileUtil {
     /**
      * 从URL中解析下载的文件编号
      *
-     * @param binLogs 下载连接
+     * @param binLogs 一批下载连接
      * @return 文件编号
      */
     public static List<Integer> getFileNumberFromUrl(List<BinLogFile> binLogs, String regex) {

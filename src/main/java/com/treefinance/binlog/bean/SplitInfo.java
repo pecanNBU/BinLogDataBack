@@ -59,8 +59,9 @@ public class SplitInfo implements Serializable {
     }
 
     public String getSimpleName(){
-        String[] names = fileName.split("\\.");
-        return names[0];
+//        String[] names = fileName.split("\\.");
+//        return names[0];
+        return fileName.replace(".tar","");
     }
 
 

@@ -98,9 +98,7 @@ public class HDFSFileUtil {
     }
 
 
-    /**
-     * @param args
-     */
+ /*
     public static void main(String[] args) {
         String dst = "hdfs://master1:8020/pc/";
         String src = "/Users/personalc/project/binlogfiles/rm-bp11gox03jgt2ullb";
@@ -110,7 +108,7 @@ public class HDFSFileUtil {
         status = put2HDFS(src, dst, conf);
         System.out.println("status=" + status);
 
-        /*src = "hdfs://xcloud:9000/user/xcloud/out/loadtable.rb";
+        *//*src = "hdfs://xcloud:9000/user/xcloud/out/loadtable.rb";
         dst = "/tmp/output";
         status = getFromHDFS(src, dst, conf);
         System.out.println("status=" + status);
@@ -118,8 +116,8 @@ public class HDFSFileUtil {
         src = "hdfs://xcloud:9000/user/xcloud/out/loadtable.rb";
         dst = "/tmp/output/loadtable.rb";
         status = checkAndDel(dst, conf);
-        System.out.println("status=" + status);*/
-    }
+        System.out.println("status=" + status);*//*
+    }*/
 
     /**
      * @param src

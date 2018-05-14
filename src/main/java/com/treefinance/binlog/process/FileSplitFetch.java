@@ -17,14 +17,14 @@ import java.net.URL;
 public class FileSplitFetch implements Runnable {
     private static Logger LOG = Logger.getLogger(FileSplitFetch.class);
     private String url;               // 文件所在url
-    private long startPos;            // 分段传输的开始位置
-    private long endPos;              // 结束位置
+    long startPos;          // 分段传输的开始位置
+    long endPos;            // 结束位置
     private int threadID;             // 线程编号
     boolean downOver = false;         // 下载完成标志
     private boolean stop = false;     // 当前分段结束标志
     private FileUtil fileUtil;        // 文件工具
 
-    private FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName) throws IOException {
+    FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName){
         super();
         this.url = url;
         this.startPos = startPos;
