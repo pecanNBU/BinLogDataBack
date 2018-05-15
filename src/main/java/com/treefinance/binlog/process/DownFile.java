@@ -2,7 +2,6 @@ package com.treefinance.binlog.process;
 
 
 import com.treefinance.binlog.bean.SplitInfo;
-import com.treefinance.binlog.util.LogUtil;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -23,6 +22,7 @@ public class DownFile {
     boolean firstDown = true;              // 是否第一次下载文件
     boolean stop = false;                  // 停止标志
     File infoFile;                         // 保存文件信息的临时文件
+
 
     public DownFile(SplitInfo siteInfo) {
         this.siteInfo = siteInfo;
@@ -57,20 +57,16 @@ public class DownFile {
                 LOG.info("文件不可访问");
                 return;
             } else {
-
                 // 设置每次分段下载的开始位置
                 for (int i = 0; i < startPos.length; i++) {
                     startPos[i] = i * (fileLen / startPos.length);
                 }
-
                 //设置每次分段下载的结束位置
                 for (int i = 0; i < endPos.length - 1; i++) {
                     endPos[i] = startPos[i + 1];
                 }
                 endPos[endPos.length - 1] = fileLen;
-
             }
-
         }
 
         //启动分段下载子线程
@@ -89,7 +85,7 @@ public class DownFile {
         //循环判断所有文件是否下载完毕
         boolean breakWhile = false;
         while (!stop) {
-            LogUtil.sleep(5000);
+            sleep(5000);
             breakWhile = true;
             for (int i = 0; i < startPos.length; i++) {
                 if (!fileSplitFetchs[i].downOver) {
@@ -197,6 +193,14 @@ public class DownFile {
         stop = true;
         for (int i = 0; i < startPos.length; i++) {
             fileSplitFetchs[i].setSplitTransStop();
+        }
+    }
+    public static void sleep(int mills){
+        try{
+            Thread.sleep(mills);
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }

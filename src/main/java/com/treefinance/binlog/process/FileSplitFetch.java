@@ -2,6 +2,7 @@ package com.treefinance.binlog.process;
 
 
 import com.treefinance.binlog.util.FileUtil;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -17,14 +18,15 @@ import java.net.URL;
 public class FileSplitFetch implements Runnable {
     private static Logger LOG = Logger.getLogger(FileSplitFetch.class);
     private String url;               // 文件所在url
-    long startPos;          // 分段传输的开始位置
-    long endPos;            // 结束位置
+    long startPos;                    // 分段传输的开始位置
+    long endPos;                      // 结束位置
     private int threadID;             // 线程编号
     boolean downOver = false;         // 下载完成标志
     private boolean stop = false;     // 当前分段结束标志
     private FileUtil fileUtil;        // 文件工具
 
-    FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName){
+
+    FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName) {
         super();
         this.url = url;
         this.startPos = startPos;

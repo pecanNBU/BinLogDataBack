@@ -1,8 +1,6 @@
 package com.treefinance.binlog.process;
 
 import com.treefinance.binlog.bean.HdfsFileInfo;
-import com.treefinance.binlog.bean.SplitInfo;
-import com.treefinance.binlog.util.LogUtil;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -42,14 +40,50 @@ public class UpLoad2HDFS {
      */
     public void startUpLoad() {
 
+        if (fileTransSet()) {
+
+            //启动分段下载子线程
+
+            fileSplitUpLoadHDFS = new FileSplitUpLoadHDFS[startPos.length];
+            for (int i = 0; i < startPos.length; i++) {
+                System.out.println(startPos[i] + " " + endPos[i]);
+                fileSplitUpLoadHDFS[i] = new FileSplitUpLoadHDFS(hdfsFileInfo.getSrc(), hdfsFileInfo.getHdfsPath(), startPos[i], endPos[i], i, hdfsFileInfo.getFileName());
+                LOG.info("Thread " + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
+                new Thread(fileSplitUpLoadHDFS[i]).start();
+            }
+
+            //保存文件下载信息
+            saveInfo();
+            //循环判断所有文件是否下载完毕
+            boolean breakWhile = false;
+            while (!stop) {
+                DownFile.sleep(1000);
+                breakWhile = true;
+
+                for (int i = 0; i < startPos.length; i++) {
+                    if (!fileSplitUpLoadHDFS[i].upOver) {
+                        breakWhile = false; // 还存在未下载完成的线程
+                        break;
+                    }
+                }
+
+                if (breakWhile)
+                    break;
+            }
+
+            LOG.info("文件下载完成");
+        }
+    }
+
+    private boolean fileTransSet() {
         if (firstDown) {
             fileLen = getFileSize();
             if (fileLen == -1) {
                 LOG.info("文件大小未知");
-                return;
+                return false;
             } else if (fileLen == -2) {
                 LOG.info("文件不可访问");
-                return;
+                return false;
             } else {
                 // 设置每次分段下载的开始位置
                 for (int i = 0; i < startPos.length; i++) {
@@ -65,38 +99,7 @@ public class UpLoad2HDFS {
             }
 
         }
-
-        //启动分段下载子线程
-
-        fileSplitUpLoadHDFS = new FileSplitUpLoadHDFS[startPos.length];
-        for (int i = 0; i < startPos.length; i++) {
-            System.out.println(startPos[i] + " " + endPos[i]);
-            fileSplitUpLoadHDFS[i] = new FileSplitUpLoadHDFS(hdfsFileInfo.getSrc(), hdfsFileInfo.getHdfsPath(), startPos[i], endPos[i], i, hdfsFileInfo.getFileName());
-            LOG.info("Thread " + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-            new Thread(fileSplitUpLoadHDFS[i]).start();
-        }
-
-        //保存文件下载信息
-        saveInfo();
-        //循环判断所有文件是否下载完毕
-        boolean breakWhile = false;
-        while (!stop) {
-
-            LogUtil.sleep(50);
-            breakWhile = true;
-
-            for (int i = 0; i < startPos.length; i++) {
-                if (!fileSplitUpLoadHDFS[i].upOver) {
-                    breakWhile = false; // 还存在未下载完成的线程
-                    break;
-                }
-            }
-
-            if (breakWhile)
-                break;
-        }
-
-        LOG.info("文件下载完成");
+        return true;
     }
 
     /**
@@ -119,19 +122,6 @@ public class UpLoad2HDFS {
             e.printStackTrace();
         }
     }
-
-    /**
-     * 获取文件的大小
-     *
-     * @return
-     */
-    private long getFileSize() {
-        File file = new File(hdfsFileInfo.getSrc() + File.separator + hdfsFileInfo.getFileName());
-        Boolean flag = file.exists();
-        System.out.println(flag);
-        return file.length();
-    }
-
     /**
      * 读取文件下载保存的信息
      */
@@ -153,6 +143,18 @@ public class UpLoad2HDFS {
             LOG.info(e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 获取文件的大小
+     *
+     * @return
+     */
+    private long getFileSize() {
+        File file = new File(hdfsFileInfo.getSrc() + File.separator + hdfsFileInfo.getFileName());
+        Boolean flag = file.exists();
+        System.out.println(flag);
+        return file.length();
     }
 
     /**

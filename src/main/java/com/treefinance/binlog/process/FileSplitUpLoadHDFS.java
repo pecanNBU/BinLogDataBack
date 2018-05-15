@@ -11,8 +11,8 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 
 
-public class FileSplitUpLoadHDFS implements Runnable {
-    private static Logger LOG = Logger.getLogger(FileSplitUpLoadHDFS.class);
+public class FileSplitUpLoadHDFS implements Runnable{
+   private static Logger LOG = Logger.getLogger(FileSplitUpLoadHDFS.class);
     private String src;               // 文件所在url
     private String dest;
     private long startPos;            // 分段传输的开始位置

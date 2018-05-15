@@ -90,8 +90,8 @@ public class HDFSFileUtil {
             } else {
                 return false;
             }
-        } catch (IOException ie) {
-            ie.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
             return false;
         }
         return true;
