@@ -3,18 +3,152 @@
   <component name="ChangeListManager">
     <list default="true" id="dcc213c0-950b-44db-a1a5-d7a354542a5b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log4jtest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4jtest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/bean/SplitInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/process/DownFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/process/FileSplitFetch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/DownLoadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/LogUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/treefinance/binlog/util/TarUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4jtest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4jtest.log.1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/LogUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/DownFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/DownFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/FileSplitFetch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/FileSplitFetch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/UpLoad2HDFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/UpLoad2HDFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/HDFSFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/HDFSFileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/bean/SplitInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/process/DownFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/process/FileSplitFetch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/DownLoadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/LogUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/bin/src/main/java/com/treefinance/binlog/util/TarUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/conf/instance.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/conf/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/aliyun-java-sdk-core-3.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/aliyun-java-sdk-rds-2.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/apacheds-i18n-2.0.0-M15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/apacheds-kerberos-codec-2.0.0-M15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/api-asn1-api-1.0.0-M20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/api-util-1.0.0-M20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/asm-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/avro-1.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-beanutils-1.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-beanutils-core-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-cli-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-codec-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-collections-3.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-compress-1.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-configuration-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-digester-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-httpclient-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-io-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-lang-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-logging-1.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-math3-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/commons-net-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/curator-client-2.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/curator-framework-2.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/curator-recipes-2.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/gson-2.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/guava-11.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-annotations-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-auth-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-client-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-common-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-hdfs-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-mapreduce-client-app-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-mapreduce-client-common-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-mapreduce-client-core-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-mapreduce-client-jobclient-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-mapreduce-client-shuffle-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-yarn-api-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-yarn-client-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-yarn-common-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/hadoop-yarn-server-common-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/htrace-core-3.1.0-incubating.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/httpclient-4.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/httpcore-4.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jackson-core-asl-1.9.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jackson-jaxrs-1.8.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jackson-mapper-asl-1.9.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jackson-xc-1.8.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/java-xmlbuilder-0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/javatar-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jaxb-api-2.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jaxb-impl-2.2.3-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jersey-client-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jersey-core-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jersey-json-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jersey-server-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jets3t-0.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jettison-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jetty-6.1.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jetty-util-6.1.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jsch-0.1.42.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/json-20170516.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jsp-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/jsr305-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/leveldbjni-all-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/mysql-binlog-connector-java-0.13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/netty-3.6.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/netty-all-4.0.23.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/paranamer-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/protobuf-java-2.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/servlet-api-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/slf4j-api-1.7.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/slf4j-log4j12-1.7.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/snappy-java-1.0.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/stax-api-1.0-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/xercesImpl-2.9.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/xml-apis-1.3.04.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/xmlenc-0.52.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BinLogProcess-1.0-SNAPSHOT/lib/zookeeper-3.4.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/${project.build.defaultGoal}/classes/instance.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/${project.build.defaultGoal}/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/HdfsFileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/SplitInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/BinLogDownLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/DownFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/FileSplitFetch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/FileSplitUpLoadHDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/UpLoad2HDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/BinLogFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/DBInstanceUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/DownLoadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/HDFSFileUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/LogUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/TarUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/instance.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,7 +220,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
-              <caret line="75" column="78" lean-forward="true" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="56" />
+              <caret line="75" column="78" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -109,7 +243,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="165" column="55" lean-forward="true" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
+              <caret line="165" column="55" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -323,16 +457,6 @@
             <path>
               <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
               <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,80 +464,6 @@
               <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assembly" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="treefinance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="treefinance" type="462c0819:PsiDirectoryNode" />
-              <item name="binlog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="treefinance" type="462c0819:PsiDirectoryNode" />
-              <item name="binlog" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="treefinance" type="462c0819:PsiDirectoryNode" />
-              <item name="binlog" type="462c0819:PsiDirectoryNode" />
-              <item name="process" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -612,12 +662,12 @@
       <workItem from="1526283223659" duration="597000" />
       <workItem from="1526283890656" duration="13118000" />
       <workItem from="1526305222260" duration="734000" />
-      <workItem from="1526347933871" duration="552000" />
+      <workItem from="1526347933871" duration="823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183209000" />
+    <option name="totallyTimeSpent" value="183480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -630,7 +680,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32969698" />
@@ -644,10 +693,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.46666667" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35272726" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.35272726" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.23962805" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.23962805" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
       <window_info id="Structure" order="1" sideWeight="0.50142854" side_tool="true" weight="0.26680973" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1139,14 +1188,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="75" column="78" lean-forward="true" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="56" />
+          <caret line="75" column="78" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="165" column="55" lean-forward="true" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
+          <caret line="165" column="55" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
