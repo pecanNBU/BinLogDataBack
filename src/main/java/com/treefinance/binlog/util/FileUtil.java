@@ -6,6 +6,9 @@ import java.io.*;
 import java.net.URL;
 import java.util.Properties;
 
+/**
+ * @author personalc
+ */
 public class FileUtil {
     private static Logger LOG = Logger.getLogger(FileUtil.class);
     private RandomAccessFile file;
@@ -54,16 +57,15 @@ public class FileUtil {
 
     /**
      * 设置文件存储开始位置
-     * @param fileName 文件名
+     * @param filePath 文件名
      * @param startPos 文件存储的起始位置
      */
-    public FileUtil(String fileName, long startPos) {
+    public FileUtil(String filePath, long startPos) {
         try {
-            file = new RandomAccessFile(fileName, "rw");
+            file = new RandomAccessFile(filePath, "rw");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
         try {
             file.seek(startPos);
         } catch (IOException e) {

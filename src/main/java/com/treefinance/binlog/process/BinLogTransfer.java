@@ -83,7 +83,7 @@ public class BinLogTransfer {
                         SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(),
                                 filePath,
                                 BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
-                        DownFile downFile = new DownFile(splitInfo);
+                        DownLoad downFile = new DownLoad(splitInfo);
                         downFile.startDown();
                         BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
                         LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");

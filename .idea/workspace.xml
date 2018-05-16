@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dcc213c0-950b-44db-a1a5-d7a354542a5b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitPush.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="DownFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="52" column="37" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="37" />
+            <state relative-caret-position="293">
+              <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +52,8 @@
       <file leaf-file-name="SplitInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            <state relative-caret-position="495">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding>
                 <element signature="e#471#472#0" expanded="true" />
                 <element signature="e#516#517#0" expanded="true" />
@@ -81,6 +82,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FileSplitPush.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitPush.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3467#3468#0" expanded="true" />
+                <element signature="e#3494#3495#0" expanded="true" />
+                <element signature="e#3605#3606#0" expanded="true" />
+                <element signature="e#3631#3632#0" expanded="true" />
+                <element signature="e#3756#3757#0" expanded="true" />
+                <element signature="e#3787#3788#0" expanded="true" />
+                <element signature="e#3832#3833#0" expanded="true" />
+                <element signature="e#3859#3860#0" expanded="true" />
+                <element signature="e#3996#3997#0" expanded="true" />
+                <element signature="e#4024#4025#0" expanded="true" />
+                <element signature="e#4070#4071#0" expanded="true" />
+                <element signature="e#4104#4105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BinLogTransfer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,8 +127,8 @@
       <file leaf-file-name="UpLoadToHdfs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="906">
-              <caret line="197" column="47" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
+            <state relative-caret-position="195">
+              <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,23 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HDFSFileUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileSplitFetch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+            <state relative-caret-position="810">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,8 +160,17 @@
       <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="795">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomAccessFile.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/io/RandomAccessFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -178,10 +200,12 @@
       <find>create</find>
       <find>sleep</find>
       <find>conf</find>
+      <find>hdfsFileInfo</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>LOG.info</replace>
+      <replace>splitInfo</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -210,11 +234,6 @@
         <option value="$PROJECT_DIR$/../breakpointtrans/BreakPointTrans/src/action/DownFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/LogUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/NewHDFSUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileSplitUpLoadHDFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java" />
@@ -227,23 +246,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DownLoadUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hdfs-site.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/instance.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" />
       </list>
     </option>
@@ -600,12 +624,12 @@
       <workItem from="1526347933871" duration="14256000" />
       <workItem from="1526434207929" duration="2171000" />
       <workItem from="1526437447962" duration="6164000" />
-      <workItem from="1526451200316" duration="6176000" />
+      <workItem from="1526451200316" duration="8159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211424000" />
+    <option name="totallyTimeSpent" value="213407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -631,7 +655,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.36363637" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3139394" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30666667" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4964789" visible="true" weight="0.34191704" />
@@ -691,8 +715,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java</url>
-          <line>83</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitPush.java</url>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
@@ -727,8 +751,8 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java</url>
-          <line>84</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitPush.java</url>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
@@ -743,13 +767,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
@@ -1023,52 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitUpLoadHDFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2700#2701#0" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#2794#2795#0" expanded="true" />
-            <element signature="e#2825#2826#0" expanded="true" />
-            <element signature="e#2852#2853#0" expanded="true" />
-            <element signature="e#2892#2893#0" expanded="true" />
-            <element signature="e#2924#2925#0" expanded="true" />
-            <element signature="e#2957#2958#0" expanded="true" />
-            <element signature="e#2988#2989#0" expanded="true" />
-            <element signature="e#3034#3035#0" expanded="true" />
-            <element signature="e#3074#3075#0" expanded="true" />
-            <element signature="e#3105#3106#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3212#3213#0" expanded="true" />
-            <element signature="e#3244#3245#0" expanded="true" />
-            <element signature="e#3275#3276#0" expanded="true" />
-            <element signature="e#3320#3321#0" expanded="true" />
-            <element signature="e#3360#3361#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#3422#3423#0" expanded="true" />
-            <element signature="e#3467#3468#0" expanded="true" />
-            <element signature="e#3503#3504#0" expanded="true" />
-            <element signature="e#3534#3535#0" expanded="true" />
-            <element signature="e#3561#3562#0" expanded="true" />
-            <element signature="e#3602#3603#0" expanded="true" />
-            <element signature="e#3634#3635#0" expanded="true" />
-            <element signature="e#3671#3672#0" expanded="true" />
-            <element signature="e#3702#3703#0" expanded="true" />
-            <element signature="e#3752#3753#0" expanded="true" />
-            <element signature="e#3792#3793#0" expanded="true" />
-            <element signature="e#3825#3826#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3918#3919#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DownLoadUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -1083,27 +1054,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
-          <caret line="105" column="58" selection-start-line="105" selection-start-column="58" selection-end-line="105" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1136,13 +1086,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1256">
+          <caret line="105" column="58" selection-start-line="105" selection-start-column="58" selection-end-line="105" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1153,10 +1107,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/io/RandomAccessFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        <state relative-caret-position="495">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
             <element signature="e#471#472#0" expanded="true" />
             <element signature="e#516#517#0" expanded="true" />
@@ -1184,10 +1162,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitPush.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="52" column="37" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="37" />
+        <state relative-caret-position="175">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3467#3468#0" expanded="true" />
+            <element signature="e#3494#3495#0" expanded="true" />
+            <element signature="e#3605#3606#0" expanded="true" />
+            <element signature="e#3631#3632#0" expanded="true" />
+            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="e#3787#3788#0" expanded="true" />
+            <element signature="e#3832#3833#0" expanded="true" />
+            <element signature="e#3859#3860#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+            <element signature="e#4024#4025#0" expanded="true" />
+            <element signature="e#4070#4071#0" expanded="true" />
+            <element signature="e#4104#4105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1196,8 +1196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="197" column="47" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
+        <state relative-caret-position="195">
+          <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

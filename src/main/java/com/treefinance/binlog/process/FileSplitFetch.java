@@ -13,6 +13,7 @@ import java.net.URL;
 /**
  * 用于分段传输
  * 使用HTTP协议的首部字段实现
+ * @author personalc
  */
 public class FileSplitFetch implements Runnable {
     private static Logger LOG = Logger.getLogger(FileSplitFetch.class);
@@ -46,13 +47,13 @@ public class FileSplitFetch implements Runnable {
     private FileUtil fileUtil;
 
 
-    FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName) {
+    FileSplitFetch(String url, long startPos, long endPos, int threadID, String filePath) {
         super();
         this.url = url;
         this.startPos = startPos;
         this.endPos = endPos;
         this.threadID = threadID;
-        fileUtil = new FileUtil(fileName, startPos);
+        fileUtil = new FileUtil(filePath, startPos);
     }
 
 
