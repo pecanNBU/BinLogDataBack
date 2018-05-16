@@ -16,6 +16,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * @author personalc
+ */
 public class BinLogFileUtil {
     private static Logger LOG = Logger.getLogger(BinLogFileUtil.class);
     private static Properties properties = FileUtil.getProperties();

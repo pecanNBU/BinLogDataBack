@@ -6,10 +6,13 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesRequest;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesResponse.BinLogFile;
 import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse.DBInstance;
+import com.treefinance.binlog.bean.FileSplitFetch;
+import com.treefinance.binlog.bean.FileSplitPush;
 import com.treefinance.binlog.bean.SplitInfo;
 import com.treefinance.binlog.util.BinLogFileUtil;
 import com.treefinance.binlog.util.DBInstanceUtil;
 import com.treefinance.binlog.util.FileUtil;
+import com.treefinance.binlog.util.TransferUtil;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -32,7 +35,10 @@ public class BinLogTransfer {
     private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
     private static final String START_TIME = properties.getProperty("START_TIME");
     private static final String END_TIME = properties.getProperty("END_TIME");
+    private static final String HDFS_PATH=properties.getProperty("HDFS_PAHT");
     private static String INSTANCE_ID = null;
+    private static FileSplitFetch fileSplitFetch;
+    private static FileSplitPush fileSplitPush;
 
 
     public static void main(String[] args) {
@@ -83,8 +89,13 @@ public class BinLogTransfer {
                         SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(),
                                 filePath,
                                 BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
-                        DownLoad downFile = new DownLoad(splitInfo);
-                        downFile.startDown();
+                        /*DownLoad downFile = new DownLoad(splitInfo);
+                        downFile.startDown();*/
+                        TransferUtil transferUtilDown=new TransferUtil(splitInfo,".temp");
+                        transferUtilDown.startTrans(fileSplitFetch);
+                        SplitInfo hdfsFileInfo = new SplitInfo(filePath, HDFS_PATH, fileName, 1);
+                        TransferUtil transferUtilUp=new TransferUtil(hdfsFileInfo,"_up.temp");
+                        transferUtilUp.startTrans(fileSplitPush);
                         BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
                         LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
                         // TODO: 2018/5/15 此处添加将文件地址发送队列操作
