@@ -7,8 +7,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+@Deprecated
 public class DownLoadUtil {
-    private void downLoadFile(String src, String des, String rangeFile) {
+    public static void downLoadFile(String src, String des) {
         try {
             File file = new File(des);
             HttpURLConnection connection = (HttpURLConnection) new URL(src).openConnection();
@@ -40,7 +41,7 @@ public class DownLoadUtil {
                  * */
                 FileOutputStream fos = new FileOutputStream(file, true);
 
-                byte[] buffer = new byte[102400];
+                byte[] buffer = new byte[1024];
                 int length;
                 long startTime = System.currentTimeMillis();
                 while ((length = is.read(buffer)) != -1) {

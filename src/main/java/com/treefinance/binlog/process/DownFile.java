@@ -6,22 +6,46 @@ import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 
+/**
+ * @author personalc
+ */
 public class DownFile {
     private static Logger LOG = Logger.getLogger(DownFile.class);
-    private static final int NO_ACCESS = -2; // 文件不可访问
-
-    SplitInfo siteInfo;                     // 文件信息
-    long[] startPos;                      // 开始位置
-    long[] endPos;                        // 结束位置
-    FileSplitFetch[] fileSplitFetchs;     // 多线程分段传输的线程集合
-    long fileLen;                          // 文件长度
-    boolean firstDown = true;              // 是否第一次下载文件
-    boolean stop = false;                  // 停止标志
-    File infoFile;                         // 保存文件信息的临时文件
+    /**
+     * 文件不可访问
+     */
+    private static final int NO_ACCESS = -2;
+    /**
+     * 文件信息
+     */
+    private SplitInfo siteInfo;
+    /**
+     * 开始位置
+     */
+    private long[] startPos;
+    /**
+     * 结束位置
+     */
+    private long[] endPos;
+    /**
+     * 多线程分段传输的线程集合
+     */
+    private FileSplitFetch[] fileSplitFetchs;
+    /**
+     * 是否第一次下载文件
+     */
+    private boolean firstDown = true;
+    /**
+     * 停止标志
+     */
+    private boolean stop = false;
+    /**
+     * 保存文件信息的临时文件
+     */
+    private File infoFile;
 
 
     public DownFile(SplitInfo siteInfo) {
@@ -43,13 +67,12 @@ public class DownFile {
      * 3. 实例化分段下载子线程
      * 4. 启动子线程
      * 5. 等待子线程的返回
-     *
-     * @throws IOException
      */
-    public void startDown() {
+    void startDown() {
 
         if (firstDown) {
-            fileLen = getFileSize();
+            //文件长度
+            long fileLen = getFileSize();
             if (fileLen == -1) {
                 LOG.info("文件大小未知");
                 return;
@@ -70,7 +93,6 @@ public class DownFile {
         }
 
         //启动分段下载子线程
-
         fileSplitFetchs = new FileSplitFetch[startPos.length];
         for (int i = 0; i < startPos.length; i++) {
             System.out.println(startPos[i] + " " + endPos[i]);
@@ -82,19 +104,22 @@ public class DownFile {
 
         //保存文件下载信息
         saveInfo();
-        //循环判断所有文件是否下载完毕
-        boolean breakWhile = false;
+        //循环判断所有文件
+        // 是否下载完毕
+        boolean breakWhile;
         while (!stop) {
-            sleep(5000);
+            sleep(500);
             breakWhile = true;
             for (int i = 0; i < startPos.length; i++) {
                 if (!fileSplitFetchs[i].downOver) {
-                    breakWhile = false; // 还存在未下载完成的线程
+                    // 还存在未下载完成的线程
+                    breakWhile = false;
                     break;
                 }
             }
-            if (breakWhile)
+            if (breakWhile) {
                 break;
+            }
         }
         LOG.info("文件下载完成");
     }
@@ -111,9 +136,6 @@ public class DownFile {
                 output.writeLong(fileSplitFetchs[i].endPos);
             }
             output.close();
-        } catch (FileNotFoundException e) {
-            LOG.info(e.getMessage());
-            e.printStackTrace();
         } catch (IOException e) {
             LOG.info(e.getMessage());
             e.printStackTrace();
@@ -123,7 +145,7 @@ public class DownFile {
     /**
      * 获取文件的大小
      *
-     * @return
+     * @return 文件大小
      */
     private long getFileSize() {
         int len = -1;
@@ -135,7 +157,8 @@ public class DownFile {
             int respCode = connection.getResponseCode();
             if (respCode >= 400) {
                 LOG.info("Error Code : " + respCode);
-                return NO_ACCESS; // 代表文件不可访问
+                // 代表文件不可访问
+                return NO_ACCESS;
             }
 
             String header;
@@ -150,9 +173,6 @@ public class DownFile {
                     break;
                 }
             }
-        } catch (MalformedURLException e) {
-            LOG.info(e.getMessage());
-            e.printStackTrace();
         } catch (IOException e) {
             LOG.info(e.getMessage());
             e.printStackTrace();
@@ -195,10 +215,11 @@ public class DownFile {
             fileSplitFetchs[i].setSplitTransStop();
         }
     }
-    public static void sleep(int mills){
-        try{
+
+    public static void sleep(int mills) {
+        try {
             Thread.sleep(mills);
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }

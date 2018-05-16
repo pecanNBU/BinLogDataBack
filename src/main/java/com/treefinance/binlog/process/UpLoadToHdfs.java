@@ -5,18 +5,46 @@ import org.apache.log4j.Logger;
 
 import java.io.*;
 
-public class UpLoad2HDFS {
-    private static Logger LOG = Logger.getLogger(UpLoad2HDFS.class);
-    HdfsFileInfo hdfsFileInfo;                     // 文件信息
-    long[] startPos;                      // 开始位置
-    long[] endPos;                        // 结束位置
-    FileSplitUpLoadHDFS[] fileSplitUpLoadHDFS;     // 多线程分段传输的线程集合
-    long fileLen;                          // 文件长度
-    boolean firstDown = true;              // 是否第一次下载文件
-    boolean stop = false;                  // 停止标志
+/**
+ * @author personalc
+ */
+public class UpLoadToHdfs {
+    private static Logger LOG = Logger.getLogger(UpLoadToHdfs.class);
+    /**
+     * 文件信息
+     */
+    HdfsFileInfo hdfsFileInfo;
+    /**
+     * 开始位置
+     */
+    long[] startPos;
+    /**
+     * 结束位置
+     */
+    long[] endPos;
+    /**
+     * 多线程分段传输的线程集合
+     */
+    FileSplitUpLoadHDFS[] fileSplitUpLoadHDFS;
+    /**
+     * 文件长度
+     */
+    long fileLen;
+    /**
+     * 是否第一次下载文件
+     */
+    boolean firstDown = true;
+    /**
+     * 停止标志
+     */
+    boolean stop = false;
     File infoFile;
 
-    public UpLoad2HDFS(HdfsFileInfo hdfsFileInfo) {
+    /**
+     *
+     * @param hdfsFileInfo
+     */
+    public UpLoadToHdfs(HdfsFileInfo hdfsFileInfo) {
         this.hdfsFileInfo = hdfsFileInfo;
         infoFile = new File(hdfsFileInfo.getSrc() + File.separator + hdfsFileInfo.getSimpleName() + "_up.tmp");
         if (infoFile.exists()) {
@@ -43,7 +71,6 @@ public class UpLoad2HDFS {
         if (fileTransSet()) {
 
             //启动分段下载子线程
-
             fileSplitUpLoadHDFS = new FileSplitUpLoadHDFS[startPos.length];
             for (int i = 0; i < startPos.length; i++) {
                 System.out.println(startPos[i] + " " + endPos[i]);
@@ -57,18 +84,18 @@ public class UpLoad2HDFS {
             //循环判断所有文件是否下载完毕
             boolean breakWhile = false;
             while (!stop) {
-                DownFile.sleep(1000);
+                DownFile.sleep(60000);
                 breakWhile = true;
-
                 for (int i = 0; i < startPos.length; i++) {
                     if (!fileSplitUpLoadHDFS[i].upOver) {
-                        breakWhile = false; // 还存在未下载完成的线程
+                        // 还存在未下载完成的线程
+                        breakWhile = false;
                         break;
                     }
                 }
-
-                if (breakWhile)
+                if (breakWhile) {
                     break;
+                }
             }
 
             LOG.info("文件下载完成");
@@ -89,7 +116,6 @@ public class UpLoad2HDFS {
                 for (int i = 0; i < startPos.length; i++) {
                     startPos[i] = i * (fileLen / startPos.length);
                 }
-
                 //设置每次分段下载的结束位置
                 for (int i = 0; i < endPos.length - 1; i++) {
                     endPos[i] = startPos[i + 1];
@@ -122,6 +148,7 @@ public class UpLoad2HDFS {
             e.printStackTrace();
         }
     }
+
     /**
      * 读取文件下载保存的信息
      */
@@ -168,10 +195,11 @@ public class UpLoad2HDFS {
     }
 
     public static void main(String args[]) {
+        String src = "/Users/personalc/project/binlogfiles/test/rm-bp1h5j9w2o9335zsn/4332347";
         String dst = "hdfs://master1:8020/pc/";
-        String src = "/Users/personalc/project/binlogfiles/test/rm-bp1h5j9w2o9335zsn/2018-05-12T00:00:00Z/4332347";
-        HdfsFileInfo hdfsFileInfo = new HdfsFileInfo(src, dst, "mysql-bin.000672.tar", 3);
-        UpLoad2HDFS upLoad2HDFS = new UpLoad2HDFS(hdfsFileInfo);
-        upLoad2HDFS.startUpLoad();
+        String fileName = "mysql-bin.000672.tar";
+        HdfsFileInfo hdfsFileInfo = new HdfsFileInfo(src, dst, fileName, 1);
+        UpLoadToHdfs upLoadToHdfs = new UpLoadToHdfs(hdfsFileInfo);
+        upLoadToHdfs.startUpLoad();
     }
 }

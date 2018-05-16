@@ -2,7 +2,6 @@ package com.treefinance.binlog.process;
 
 
 import com.treefinance.binlog.util.FileUtil;
-import org.apache.hadoop.fs.FileSystem;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -17,13 +16,34 @@ import java.net.URL;
  */
 public class FileSplitFetch implements Runnable {
     private static Logger LOG = Logger.getLogger(FileSplitFetch.class);
-    private String url;               // 文件所在url
-    long startPos;                    // 分段传输的开始位置
-    long endPos;                      // 结束位置
-    private int threadID;             // 线程编号
-    boolean downOver = false;         // 下载完成标志
-    private boolean stop = false;     // 当前分段结束标志
-    private FileUtil fileUtil;        // 文件工具
+    /**
+     * 文件所在url
+     */
+    private String url;
+    /**
+     * 分段传输的开始位置
+     */
+    long startPos;
+    /**
+     * 结束位置
+     */
+    long endPos;
+    /**
+     * 线程编号
+     */
+    private int threadID;
+    /**
+     * 下载完成标志
+     */
+    boolean downOver = false;
+    /**
+     * 当前分段结束标志
+     */
+    private boolean stop = false;
+    /**
+     * 文件工具
+     */
+    private FileUtil fileUtil;
 
 
     FileSplitFetch(String url, long startPos, long endPos, int threadID, String fileName) {
@@ -43,7 +63,8 @@ public class FileSplitFetch implements Runnable {
                 URL ourl = new URL(url);
                 HttpURLConnection httpConnection = (HttpURLConnection) ourl.openConnection();
                 String prop = "bytes=" + startPos + "-";
-                httpConnection.setRequestProperty("RANGE", prop); //设置请求首部字段 RANGE
+                //设置请求首部字段 RANGE
+                httpConnection.setRequestProperty("RANGE", prop);
 
                 LOG.info(prop);
 

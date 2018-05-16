@@ -1,6 +1,7 @@
 package com.treefinance.binlog.process;
 
 import com.treefinance.binlog.util.FileUtil;
+import com.treefinance.binlog.util.HDFSFileUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FSDataOutputStream;
@@ -8,20 +9,57 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
 
 
-public class FileSplitUpLoadHDFS implements Runnable{
-   private static Logger LOG = Logger.getLogger(FileSplitUpLoadHDFS.class);
-    private String src;               // 文件所在url
+public class FileSplitUpLoadHDFS implements Runnable {
+    private static Logger LOG = Logger.getLogger(FileSplitUpLoadHDFS.class);
+    /**
+     * 文件所在url
+     */
+    private String src;
+    /**
+     * HDFS 路径
+     */
     private String dest;
-    private long startPos;            // 分段传输的开始位置
-    private long endPos;              // 结束位置
-    private int threadID;             // 线程编号
-    boolean upOver = false;         // 下载完成标志
-    private boolean stop = false;     // 当前分段结束标志
-    private FileUtil fileUtil;        // 文件工具
-    private FileSystem fs;
+    /**
+     * 文件名
+     */
+    private String fileName;
+    /**
+     * 分段传输的开始位置
+     */
+    private long startPos;
+    /**
+     * 结束位置
+     */
+    private long endPos;
+    /**
+     * 线程编号
+     */
+    private int threadID;
+    /**
+     * 下载完成标志
+     */
+    boolean upOver = false;
+    /**
+     * 当前分段结束标志
+     */
+    private boolean stop = false;
+    /**
+     * 文件操作工具
+     */
+    private FileUtil fileUtil;
+    /**
+     * HDFS文件系统实例
+     */
+    private FileSystem fs = HDFSFileUtil.fileSystem;
+
+    private static Configuration conf = HDFSFileUtil.configuration;
+
+    private FileSystem local;
+
 
     FileSplitUpLoadHDFS(String src, String dest, long startPos, long endPos, int threadID, String fileName) {
         super();
@@ -30,19 +68,23 @@ public class FileSplitUpLoadHDFS implements Runnable{
         this.startPos = startPos;
         this.endPos = endPos;
         this.threadID = threadID;
+        this.fileName = fileName;
         fileUtil = new FileUtil(fileName, startPos);
     }
 
     @Override
     public void run() {
-        Configuration conf = new Configuration();
         try {
-            FileSystem hdfs = FileSystem.get(conf);
-            FileSystem local = FileSystem.getLocal(conf);
-            FSDataOutputStream out = hdfs.append(new Path(dest));
-            FSDataInputStream in = local.open(new Path(src));
-            byte buffer[] = new byte[1024];
-            int byteRead = 0;
+            Path dstPath = new Path(dest + File.separator + fileName);
+            fs = HDFSFileUtil.fileSystem;
+            local = FileSystem.getLocal(conf);
+            if (!fs.exists(dstPath)) {
+                fs.create(dstPath).close();
+            }
+            FSDataOutputStream out = fs.append(new Path(dest + File.separator + fileName));
+            FSDataInputStream in = local.open(new Path(src + File.separator + fileName));
+            byte[] buffer = new byte[1024];
+            int byteRead;
             while ((byteRead = in.read(buffer)) > 0 && (startPos < endPos) && !stop) {
                 out.write(buffer, 0, byteRead);
                 startPos += byteRead;
@@ -127,6 +169,7 @@ public class FileSplitUpLoadHDFS implements Runnable{
     public void setFs(FileSystem fs) {
         this.fs = fs;
     }
+
     /**
      * 停止分段传输
      */

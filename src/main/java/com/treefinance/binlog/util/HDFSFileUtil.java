@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.URI;
 
+/**
+ * @author personalc
+ */
 public class HDFSFileUtil {
     private static Logger LOG = Logger.getLogger(BinLogFileUtil.class);
     public static Configuration configuration = null;
@@ -21,6 +24,9 @@ public class HDFSFileUtil {
         try {
             if (null == configuration) {
                 configuration = new Configuration();
+                configuration.set("dfs.support.append", "true");
+                configuration.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
+                configuration.setBoolean("dfs.client.block.write.replace-datanode-on-failure.enabled", true);
             }
             if (null == fileSystem) {
                 fileSystem = FileSystem.get(URI.create(hdfsPath), configuration);
@@ -41,11 +47,7 @@ public class HDFSFileUtil {
     public static boolean put2HDFS(String src, String des, Configuration conf) {
         Path desPath = new Path(des);
         try {
-            //FileSystem fs = desPath.getFileSystem(conf);
-//          FileSystem hdfs = FileSystem.get( URI.create(dst), conf) ;
             fileSystem.copyFromLocalFile(false, new Path(src), desPath);
-            /*FileSystem fs = FileSystem.get(URI.create(des), conf);
-            FSDataOutputStream out = fs.append(new Path(des));*/
 
         } catch (IOException ie) {
             ie.printStackTrace();
@@ -65,7 +67,6 @@ public class HDFSFileUtil {
     public static boolean getFromHDFS(String src, String dst, Configuration conf) {
         Path dstPath = new Path(dst);
         try {
-            //FileSystem fs = dstPath.getFileSystem(conf);
             fileSystem.copyToLocalFile(false, new Path(src), dstPath);
         } catch (IOException ie) {
             ie.printStackTrace();
@@ -84,7 +85,6 @@ public class HDFSFileUtil {
     public static boolean checkAndDel(final String path, Configuration conf) {
         Path dstPath = new Path(path);
         try {
-            //FileSystem dhfs = dstPath.getFileSystem(conf);
             if (fileSystem.exists(dstPath)) {
                 fileSystem.delete(dstPath, true);
             } else {
@@ -97,28 +97,6 @@ public class HDFSFileUtil {
         return true;
     }
 
-
- /*
-    public static void main(String[] args) {
-        String dst = "hdfs://master1:8020/pc/";
-        String src = "/Users/personalc/project/binlogfiles/rm-bp11gox03jgt2ullb";
-        boolean status = false;
-
-        Configuration conf = new Configuration();
-        status = put2HDFS(src, dst, conf);
-        System.out.println("status=" + status);
-
-        *//*src = "hdfs://xcloud:9000/user/xcloud/out/loadtable.rb";
-        dst = "/tmp/output";
-        status = getFromHDFS(src, dst, conf);
-        System.out.println("status=" + status);
-
-        src = "hdfs://xcloud:9000/user/xcloud/out/loadtable.rb";
-        dst = "/tmp/output/loadtable.rb";
-        status = checkAndDel(dst, conf);
-        System.out.println("status=" + status);*//*
-    }*/
-
     /**
      * @param src
      * @param dest
@@ -127,8 +105,9 @@ public class HDFSFileUtil {
      */
     public static long upload2HDFSinOffset(String src, String dest, HttpServletRequest request) throws Exception {
 
-        if (src == null || src.equals(""))
+        if (src == null || src.equals("")) {
             return 0;
+        }
         long length = 0;
         LOG.info("create files in hdfs");
         Path p = new Path(dest);
@@ -178,7 +157,8 @@ public class HDFSFileUtil {
                 fileSystem.close();
                 return length;
             }
-        } catch (Exception e) {// 用户中断上传，传回已接收到的文件长度（记录在偏移量表中，以待用户断线续传时传给用户）
+        } catch (Exception e) {
+            // 用户中断上传，传回已接收到的文件长度（记录在偏移量表中，以待用户断线续传时传给用户）
             return length;
         }
     }

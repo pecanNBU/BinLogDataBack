@@ -9,6 +9,7 @@ import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse.DBInstance;
 import com.treefinance.binlog.bean.SplitInfo;
 import com.treefinance.binlog.util.BinLogFileUtil;
 import com.treefinance.binlog.util.DBInstanceUtil;
+import com.treefinance.binlog.util.DownLoadUtil;
 import com.treefinance.binlog.util.FileUtil;
 import org.apache.log4j.Logger;
 
@@ -37,9 +38,9 @@ public class BinLogDownLoad {
     public static void main(String[] args) {
         // 创建DefaultAcsClient实例并初始化
         DefaultProfile profile = DefaultProfile.getProfile(
-                REGION_ID,                     // 您的可用区ID
-                ACCESS_KEY_ID,                 // 您的AccessKey ID
-                ACCESS_SECRET);                // 您的AccessKey Secret
+                REGION_ID,
+                ACCESS_KEY_ID,
+                ACCESS_SECRET);
         IAcsClient client = new DefaultAcsClient(profile);
         // 创建API请求并设置参数
         DescribeBinlogFilesRequest binlogFilesRequest = new DescribeBinlogFilesRequest();
@@ -51,7 +52,6 @@ public class BinLogDownLoad {
         for (DBInstance dbInstance : instances) {
             binlogFilesRequest.setDBInstanceId(dbInstance.getDBInstanceId());
             List<BinLogFile> binLogFiles = BinLogFileUtil.getBinLogFiles(client, binlogFilesRequest, profile);
-
             INSTANCE_ID = DBInstanceUtil.getBackInstanceId(dbInstance);
             List<BinLogFile> fileList = binLogFiles.parallelStream()
                     .filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).collect(Collectors.toList());
@@ -73,41 +73,22 @@ public class BinLogDownLoad {
                         LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
                         String filePath = SAVE_PATH +
                                 File.separator + dbInstance.getDBInstanceId()
-                                + File.separator + START_TIME + File.separator
-                                + binLogFile.getHostInstanceID();
+                                + File.separator + binLogFile.getHostInstanceID();
                         File file = new File(filePath);
                         if (!file.exists()) {
                             file.mkdirs();
                         }
                         String fileName = BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN);
                         System.out.println(fileName);
-                        SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(), filePath, BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
+                        SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(),
+                                filePath,
+                                BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
                         DownFile downFile = new DownFile(splitInfo);
                         downFile.startDown();
                         BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
                         LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
+                        // TODO: 2018/5/15 此处添加将文件地址发送队列操作
                     });
-
-                    /*for (int i = 0; i < fileList.size(); i++) {
-                        binLogFile = fileList.get(i);
-                        LOG.info("file size: " + binLogFile.getFileSize());
-                        LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
-                        filePath = SAVE_PATH +
-                                File.separator + dbInstance.getDBInstanceId()
-                                + File.separator + START_TIME + File.separator
-                                + binLogFile.getHostInstanceID();
-                        file = new File(filePath);
-                        if (!file.exists()) {
-                            file.mkdirs();
-                        }
-                        fileName = BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN);
-                        System.out.println(fileName);
-                        splitInfo = new SplitInfo(binLogFile.getDownloadLink(), filePath, BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
-                        downFile = new DownFile(splitInfo);
-                        downFile.startDown();
-                        BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
-                        LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
-                    }*/
                 } else {
                     LOG.info("the downloaded binlog files is not complete");
                 }

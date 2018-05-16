@@ -14,6 +14,9 @@ import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse.DBInstance;
 
 import org.apache.log4j.Logger;
 
+/**
+ * @author personalc
+ */
 public class DBInstanceUtil {
     private static Logger LOG = Logger.getLogger(DBInstance.class);
     private static Properties properties = FileUtil.getProperties();
@@ -26,9 +29,12 @@ public class DBInstanceUtil {
 
     static {
         profile = DefaultProfile.getProfile(
-                REGION_ID,                     // 您的可用区ID
-                ACCESS_KEY_ID,                  // 您的AccessKey ID
-                ACCESS_SECRET);                // 您的AccessKey Secret
+                // 您的可用区ID
+                REGION_ID,
+                // 您的AccessKey ID
+                ACCESS_KEY_ID,
+                // 您的AccessKey Secret
+                ACCESS_SECRET);
     }
 
     /**
@@ -59,12 +65,12 @@ public class DBInstanceUtil {
             dbInstancesResponse = client.getAcsResponse(dbInstancesRequest, profile);
             int totalInstance = dbInstancesResponse.getTotalRecordCount();
             dbInstances = new ArrayList<>(totalInstance);
-            int PageCount = 0;
+            int pageCount = 0;
             if (totalInstance > 0) {
-                PageCount = (int) Math.ceil(totalInstance / PAGE_SIZE);
+                pageCount = (int) Math.ceil(totalInstance / PAGE_SIZE);
             }
-            LOG.info("pageCount: " + PageCount);
-            for (int i = 1; i <= PageCount; i++) {
+            LOG.info("pageCount: " + pageCount);
+            for (int i = 1; i <= pageCount; i++) {
                 dbInstancesRequest.setPageNumber(i);
                 dbInstancesResponse = client.getAcsResponse(dbInstancesRequest, profile);
                 List<DBInstance> dbInstanceList = dbInstancesResponse.getItems();
@@ -97,7 +103,7 @@ public class DBInstanceUtil {
             DescribeDBInstanceHAConfigResponse haConfigResponse = client.getAcsResponse(haConfigRequest, DBInstanceUtil.getProfile());
             List<DescribeDBInstanceHAConfigResponse.NodeInfo> hostInstanceInfos = haConfigResponse.getHostInstanceInfos();
             for (DescribeDBInstanceHAConfigResponse.NodeInfo hostInstanceInfo : hostInstanceInfos) {
-                if (hostInstanceInfo.getNodeType().equals("Slave")) {
+                if ("Slave".equals(hostInstanceInfo.getNodeType())) {
                     backInstanceId = hostInstanceInfo.getNodeId();
                     System.out.println(backInstanceId);
                 }
