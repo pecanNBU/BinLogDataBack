@@ -9,7 +9,6 @@ import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse.DBInstance;
 import com.treefinance.binlog.bean.SplitInfo;
 import com.treefinance.binlog.util.BinLogFileUtil;
 import com.treefinance.binlog.util.DBInstanceUtil;
-import com.treefinance.binlog.util.DownLoadUtil;
 import com.treefinance.binlog.util.FileUtil;
 import org.apache.log4j.Logger;
 
@@ -20,6 +19,7 @@ import java.util.stream.Collectors;
 
 /**
  * 根据条件下载指定实例binlog文件
+ * @author personalc
  */
 public class BinLogDownLoad {
     private static Logger LOG = Logger.getLogger(BinLogDownLoad.class);
