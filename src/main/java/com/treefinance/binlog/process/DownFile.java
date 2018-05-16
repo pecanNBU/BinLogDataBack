@@ -21,7 +21,7 @@ public class DownFile {
     /**
      * 文件信息
      */
-    private SplitInfo siteInfo;
+    private SplitInfo splitInfo;
     /**
      * 开始位置
      */
@@ -48,15 +48,15 @@ public class DownFile {
     private File infoFile;
 
 
-    public DownFile(SplitInfo siteInfo) {
-        this.siteInfo = siteInfo;
-        infoFile = new File(siteInfo.getFilePath() + File.separator + siteInfo.getSimpleName() + ".tmp");
+    public DownFile(SplitInfo splitInfo) {
+        this.splitInfo= splitInfo;
+        infoFile = new File(splitInfo.getDestPath() + File.separator + splitInfo.getSimpleName() + ".tmp");
         if (infoFile.exists()) {
             firstDown = false;
             readInfo();
         } else {
-            startPos = new long[siteInfo.getSplits()];
-            endPos = new long[siteInfo.getSplits()];
+            startPos = new long[splitInfo.getSplits()];
+            endPos = new long[splitInfo.getSplits()];
         }
     }
 
@@ -96,8 +96,8 @@ public class DownFile {
         fileSplitFetchs = new FileSplitFetch[startPos.length];
         for (int i = 0; i < startPos.length; i++) {
             System.out.println(startPos[i] + " " + endPos[i]);
-            fileSplitFetchs[i] = new FileSplitFetch(siteInfo.getUrl(), startPos[i], endPos[i], i,
-                    siteInfo.getFilePath() + File.separator + siteInfo.getFileName());
+            fileSplitFetchs[i] = new FileSplitFetch(splitInfo.getSrcPath(), startPos[i], endPos[i], i,
+                    splitInfo.getDestPath() + File.separator + splitInfo.getFileName());
             LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
             new Thread(fileSplitFetchs[i]).start();
         }
@@ -150,7 +150,7 @@ public class DownFile {
     private long getFileSize() {
         int len = -1;
         try {
-            URL url = new URL(siteInfo.getUrl());
+            URL url = new URL(splitInfo.getSrcPath());
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("User-Agent", "custom");
 

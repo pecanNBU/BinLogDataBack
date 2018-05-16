@@ -1,6 +1,6 @@
 package com.treefinance.binlog.process;
 
-import com.treefinance.binlog.bean.HdfsFileInfo;
+import com.treefinance.binlog.bean.SplitInfo;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -13,46 +13,43 @@ public class UpLoadToHdfs {
     /**
      * 文件信息
      */
-    HdfsFileInfo hdfsFileInfo;
+    private SplitInfo splitInfo;
     /**
      * 开始位置
      */
-    long[] startPos;
+    private long[] startPos;
     /**
      * 结束位置
      */
-    long[] endPos;
+    private long[] endPos;
     /**
      * 多线程分段传输的线程集合
      */
-    FileSplitUpLoadHDFS[] fileSplitUpLoadHDFS;
+    private FileSplitUpLoadHDFS[] fileSplitUpLoadHDFS;
     /**
      * 文件长度
      */
-    long fileLen;
+    private long fileLen;
     /**
      * 是否第一次下载文件
      */
-    boolean firstDown = true;
+    private boolean firstDown = true;
     /**
      * 停止标志
      */
-    boolean stop = false;
-    File infoFile;
+    private boolean stop = false;
+    private File infoFile;
 
-    /**
-     *
-     * @param hdfsFileInfo
-     */
-    public UpLoadToHdfs(HdfsFileInfo hdfsFileInfo) {
-        this.hdfsFileInfo = hdfsFileInfo;
-        infoFile = new File(hdfsFileInfo.getSrc() + File.separator + hdfsFileInfo.getSimpleName() + "_up.tmp");
+    
+    public UpLoadToHdfs(SplitInfo splitInfo) {
+        this.splitInfo = splitInfo;
+        infoFile = new File(splitInfo.getSrcPath() + File.separator + splitInfo.getSimpleName() + "_up.tmp");
         if (infoFile.exists()) {
             firstDown = false;
             readInfo();
         } else {
-            startPos = new long[hdfsFileInfo.getSplits()];
-            endPos = new long[hdfsFileInfo.getSplits()];
+            startPos = new long[splitInfo.getSplits()];
+            endPos = new long[splitInfo.getSplits()];
         }
     }
 
@@ -66,7 +63,7 @@ public class UpLoadToHdfs {
      *
      * @throws IOException
      */
-    public void startUpLoad() {
+    private void startUpLoad() {
 
         if (fileTransSet()) {
 
@@ -74,7 +71,7 @@ public class UpLoadToHdfs {
             fileSplitUpLoadHDFS = new FileSplitUpLoadHDFS[startPos.length];
             for (int i = 0; i < startPos.length; i++) {
                 System.out.println(startPos[i] + " " + endPos[i]);
-                fileSplitUpLoadHDFS[i] = new FileSplitUpLoadHDFS(hdfsFileInfo.getSrc(), hdfsFileInfo.getHdfsPath(), startPos[i], endPos[i], i, hdfsFileInfo.getFileName());
+                fileSplitUpLoadHDFS[i] = new FileSplitUpLoadHDFS(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i, splitInfo.getFileName());
                 LOG.info("Thread " + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
                 new Thread(fileSplitUpLoadHDFS[i]).start();
             }
@@ -178,7 +175,7 @@ public class UpLoadToHdfs {
      * @return
      */
     private long getFileSize() {
-        File file = new File(hdfsFileInfo.getSrc() + File.separator + hdfsFileInfo.getFileName());
+        File file = new File(splitInfo.getSrcPath() + File.separator + splitInfo.getFileName());
         Boolean flag = file.exists();
         System.out.println(flag);
         return file.length();
@@ -198,7 +195,7 @@ public class UpLoadToHdfs {
         String src = "/Users/personalc/project/binlogfiles/test/rm-bp1h5j9w2o9335zsn/4332347";
         String dst = "hdfs://master1:8020/pc/";
         String fileName = "mysql-bin.000672.tar";
-        HdfsFileInfo hdfsFileInfo = new HdfsFileInfo(src, dst, fileName, 1);
+        SplitInfo hdfsFileInfo = new SplitInfo(src, dst, fileName, 1);
         UpLoadToHdfs upLoadToHdfs = new UpLoadToHdfs(hdfsFileInfo);
         upLoadToHdfs.startUpLoad();
     }

@@ -13,11 +13,11 @@ public class SplitInfo implements Serializable {
     /**
      * 文件所在站点的url
      */
-    private String url;
+    private String srcPath;
     /**
      * 文件保存的路径
      */
-    private String filePath;
+    private String destPath;
     /**
      * 文件的名字
      */
@@ -31,27 +31,31 @@ public class SplitInfo implements Serializable {
         this("", "", "", SPLIT_COUNT);
     }
 
-    public SplitInfo(String url, String filePath, String fileName, int splits) {
-        this.url = url;
-        this.filePath = filePath;
+    public SplitInfo(String srcPath, String destPath, String fileName, int splits) {
+        this.srcPath = srcPath;
+        this.destPath = destPath;
         this.fileName = fileName;
         this.splits = splits;
     }
 
-    public String getUrl() {
-        return url;
+    public static int getSplitCount() {
+        return SPLIT_COUNT;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public String getSrcPath() {
+        return srcPath;
     }
 
-    public String getFilePath() {
-        return filePath;
+    public void setSrcPath(String srcPath) {
+        this.srcPath = srcPath;
     }
 
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
+    public String getDestPath() {
+        return destPath;
+    }
+
+    public void setDestPath(String destPath) {
+        this.destPath = destPath;
     }
 
     public String getFileName() {

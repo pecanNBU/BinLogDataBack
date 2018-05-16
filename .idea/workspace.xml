@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dcc213c0-950b-44db-a1a5-d7a354542a5b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +39,8 @@
       <file leaf-file-name="DownFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="187" column="7" lean-forward="true" selection-start-line="187" selection-start-column="7" selection-end-line="187" selection-end-column="7" />
+            <state relative-caret-position="66">
+              <caret line="52" column="37" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,61 +48,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HdfsFileInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
-              <folding>
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1130#1131#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
-                <element signature="e#1218#1219#0" expanded="true" />
-                <element signature="e#1248#1249#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1354#1355#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplitInfo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SplitInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            <state relative-caret-position="173">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
                 <element signature="e#471#472#0" expanded="true" />
                 <element signature="e#516#517#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1038#1039#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1117#1118#0" expanded="true" />
-                <element signature="e#1157#1158#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
+                <element signature="e#783#784#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#965#966#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+                <element signature="e#1079#1080#0" expanded="true" />
+                <element signature="e#1119#1120#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
                 <element signature="e#1382#1383#0" expanded="true" />
               </folding>
             </state>
@@ -111,8 +84,8 @@
       <file leaf-file-name="BinLogTransfer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+            <state relative-caret-position="258">
+              <caret line="82" column="55" lean-forward="true" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -126,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpLoadToHdfs.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UpLoadToHdfs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1521">
-              <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="906">
+              <caret line="197" column="47" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -254,8 +227,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DownLoadUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hdfs-site.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoad2HDFS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/DBInstanceUtil.java" />
@@ -270,8 +241,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogDownLoad.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java" />
       </list>
     </option>
   </component>
@@ -434,7 +407,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="sleep&#9;PSI&#9;JAVA://com.treefinance.binlog.process.DownFile#sleep&#10;recoverLeaseInternal&#9;PSI&#9;JAVA://org.apache.hadoop.hdfs.server.namenode.FSNamesystem#recoverLeaseInternal&#10;download.txt&#9;null&#9;null&#10;HostInstanceID&#9;PSI&#9;JAVA://com.aliyuncs.rds.model.v20140815.DescribeBackupsResponse.Backup#getHostInstanceID" />
+    <property name="SearchEverywhereHistoryKey" value="HdfsFileInfo&#9;PSI&#9;JAVA://com.treefinance.binlog.bean.HdfsFileInfo&#10;sleep&#9;PSI&#9;JAVA://com.treefinance.binlog.process.DownFile#sleep&#10;recoverLeaseInternal&#9;PSI&#9;JAVA://org.apache.hadoop.hdfs.server.namenode.FSNamesystem#recoverLeaseInternal&#10;download.txt&#9;null&#9;null&#10;HostInstanceID&#9;PSI&#9;JAVA://com.aliyuncs.rds.model.v20140815.DescribeBackupsResponse.Backup#getHostInstanceID" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -627,12 +600,12 @@
       <workItem from="1526347933871" duration="14256000" />
       <workItem from="1526434207929" duration="2171000" />
       <workItem from="1526437447962" duration="6164000" />
-      <workItem from="1526451200316" duration="5122000" />
+      <workItem from="1526451200316" duration="6176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210370000" />
+    <option name="totallyTimeSpent" value="211424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,12 +631,12 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.36363637" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3139394" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3139394" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4964789" visible="true" weight="0.34191704" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.24848485" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.24848485" />
       <window_info id="Structure" order="1" sideWeight="0.50352114" side_tool="true" weight="0.23819743" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -1103,26 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1521">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -1154,27 +1107,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="187" column="7" lean-forward="true" selection-start-line="187" selection-start-column="7" selection-end-line="187" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/HdfsFileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="429">
+          <caret line="80" lean-forward="true" selection-end-line="80" />
           <folding>
             <element signature="e#457#458#0" expanded="true" />
             <element signature="e#502#503#0" expanded="true" />
@@ -1200,30 +1136,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/FileSplitFetch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="82" column="55" lean-forward="true" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        <state relative-caret-position="173">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="e#471#472#0" expanded="true" />
             <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1157#1158#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
             <element signature="e#1382#1383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/DownFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/UpLoadToHdfs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="197" column="47" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
