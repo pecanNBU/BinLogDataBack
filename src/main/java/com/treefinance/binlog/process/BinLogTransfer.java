@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
  * 根据条件下载指定实例binlog文件
  * @author personalc
  */
-public class BinLogDownLoad {
-    private static Logger LOG = Logger.getLogger(BinLogDownLoad.class);
+public class BinLogTransfer {
+    private static Logger LOG = Logger.getLogger(BinLogTransfer.class);
     private static Properties properties = FileUtil.getProperties();
     private static final String REGION_ID = properties.getProperty("REGION_ID");
     private static final String ACCESS_KEY_ID = properties.getProperty("ACCESS_KEY_ID");

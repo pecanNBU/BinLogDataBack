@@ -4,19 +4,31 @@ import java.io.Serializable;
 
 /**
  * 要抓取文件的信息
- *
  */
 public class SplitInfo implements Serializable {
+    /**
+     * 默认次数为5次
+     */
+    private static final int SPLIT_COUNT = 5;
+    /**
+     * 文件所在站点的url
+     */
+    private String url;
+    /**
+     * 文件保存的路径
+     */
+    private String filePath;
+    /**
+     * 文件的名字
+     */
+    private String fileName;
+    /**
+     * 分段下载文件的次数
+     */
+    private int splits;
 
-    private static final int SPLIT_COUNT = 5; // 默认次数为5次
-
-    private String url;        // 文件所在站点的url
-    private String filePath;   // 文件保存的路径
-    private String fileName;   // 文件的名字
-    private int splits;        // 分段下载文件的次数
-
-    public SplitInfo(){
-        this("","","",SPLIT_COUNT);
+    public SplitInfo() {
+        this("", "", "", SPLIT_COUNT);
     }
 
     public SplitInfo(String url, String filePath, String fileName, int splits) {
@@ -58,12 +70,9 @@ public class SplitInfo implements Serializable {
         this.splits = splits;
     }
 
-    public String getSimpleName(){
-//        String[] names = fileName.split("\\.");
-//        return names[0];
-        return fileName.replace(".tar","");
+    public String getSimpleName() {
+        return fileName.replace(".tar", "");
     }
-
 
 
 }
