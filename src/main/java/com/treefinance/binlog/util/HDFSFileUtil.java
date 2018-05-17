@@ -10,15 +10,17 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Properties;
 
 /**
  * @author personalc
  */
 public class HDFSFileUtil {
     private static Logger LOG = Logger.getLogger(BinLogFileUtil.class);
+    private static Properties properties = FileUtil.getProperties();
     public static Configuration configuration = null;
     public static FileSystem fileSystem = null;
-    public static String hdfsPath = null;
+    public static String hdfsPath = properties.getProperty("HDFS_PAHT");
 
     static {
         try {

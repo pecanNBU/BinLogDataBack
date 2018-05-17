@@ -21,6 +21,10 @@ public class FileSplitFetch  extends FileSplit implements Runnable{
         super(src, dest, startPos, endPos, threadID, fileName);
     }
 
+    public FileSplitFetch() {
+        super();
+    }
+
     @Override
     public void run() {
         while (startPos < endPos && !stop) {

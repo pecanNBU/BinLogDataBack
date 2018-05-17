@@ -28,6 +28,10 @@ public class FileSplitPush extends FileSplit implements Runnable {
         super(src, dest, startPos, endPos, threadID, fileName);
     }
 
+    public FileSplitPush() {
+
+    }
+
     @Override
     public void run() {
         try {

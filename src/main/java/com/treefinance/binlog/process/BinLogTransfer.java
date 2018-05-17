@@ -37,8 +37,8 @@ public class BinLogTransfer {
     private static final String END_TIME = properties.getProperty("END_TIME");
     private static final String HDFS_PATH=properties.getProperty("HDFS_PAHT");
     private static String INSTANCE_ID = null;
-    private static FileSplitFetch fileSplitFetch;
-    private static FileSplitPush fileSplitPush;
+    private static FileSplitFetch fileSplitFetch=new FileSplitFetch();
+    private static FileSplitPush fileSplitPush= new FileSplitPush();
 
 
     public static void main(String[] args) {

@@ -43,7 +43,6 @@ public abstract class FileSplit implements Serializable {
     /**
      * 文件工具
      */
-
     public FileUtil fileUtil;
 
 
@@ -55,6 +54,11 @@ public abstract class FileSplit implements Serializable {
         this.threadID = threadID;
         fileUtil = new FileUtil(dest + File.separator + fileName, startPos);
     }
+
+    public FileSplit() {
+
+    }
+
     /**
      * 打印响应的头部信息
      *
