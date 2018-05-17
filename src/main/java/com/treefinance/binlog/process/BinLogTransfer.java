@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * 根据条件下载指定实例binlog文件
+ *
  * @author personalc
  */
 public class BinLogTransfer {
@@ -35,10 +36,10 @@ public class BinLogTransfer {
     private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
     private static final String START_TIME = properties.getProperty("START_TIME");
     private static final String END_TIME = properties.getProperty("END_TIME");
-    private static final String HDFS_PATH=properties.getProperty("HDFS_PAHT");
+    private static final String HDFS_PATH = properties.getProperty("HDFS_PAHT");
     private static String INSTANCE_ID = null;
-    private static FileSplitFetch fileSplitFetch=new FileSplitFetch();
-    private static FileSplitPush fileSplitPush= new FileSplitPush();
+    private static FileSplitFetch fileSplitFetch = new FileSplitFetch();
+    private static FileSplitPush fileSplitPush = new FileSplitPush();
 
 
     public static void main(String[] args) {
@@ -71,10 +72,9 @@ public class BinLogTransfer {
             if (fileList.size() > 0) {
                 int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
                 if (instanceLogSize == (maxDiff + 1)) {
-
-                    fileList.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile ->
-
-                    {
+                    //fileList.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile ->
+                    for (int i = 0; i < fileList.size(); i++) {
+                        BinLogFile binLogFile = fileList.get(i);
                         LOG.info("file size: " + binLogFile.getFileSize());
                         LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
                         String filePath = SAVE_PATH +
@@ -88,18 +88,18 @@ public class BinLogTransfer {
                         System.out.println(fileName);
                         SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(),
                                 filePath,
-                                BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 3);
+                                BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 1);
                         /*DownLoad downFile = new DownLoad(splitInfo);
                         downFile.startDown();*/
-                        TransferUtil transferUtilDown=new TransferUtil(splitInfo,".temp");
+                        TransferUtil transferUtilDown = new TransferUtil(splitInfo, ".tmp");
                         transferUtilDown.startTrans(fileSplitFetch);
                         SplitInfo hdfsFileInfo = new SplitInfo(filePath, HDFS_PATH, fileName, 1);
-                        TransferUtil transferUtilUp=new TransferUtil(hdfsFileInfo,"_up.temp");
+                        TransferUtil transferUtilUp = new TransferUtil(hdfsFileInfo, "_up.tmp");
                         transferUtilUp.startTrans(fileSplitPush);
                         BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
                         LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
                         // TODO: 2018/5/15 此处添加将文件地址发送队列操作
-                    });
+                    }
                 } else {
                     LOG.info("the downloaded binlog files is not complete");
                 }
