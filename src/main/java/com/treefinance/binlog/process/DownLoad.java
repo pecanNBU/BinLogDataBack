@@ -104,8 +104,7 @@ public class DownLoad {
 
         //保存文件下载信息
         saveInfo();
-        //循环判断所有文件
-        // 是否下载完毕
+        //循环判断所有文件是否下载完毕
         boolean breakWhile;
         while (!stop) {
             sleep(500);

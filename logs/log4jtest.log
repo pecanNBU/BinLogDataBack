@@ -42,3 +42,171 @@
 2018-05-17 09:53:43 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
 2018-05-17 09:53:43 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
 2018-05-17 09:53:43 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:28 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:28 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:29 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-17 17:23:29 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(81) -totalRecordCount: 23
+2018-05-17 17:23:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -pageCount: 1
+2018-05-17 17:23:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(94) -PageRecordCount: 23
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000700.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635409&Signature=V3UHUANSQVHXy92Nl2Gl7%2B2xaII%3D]
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000694.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635409&Signature=emQdCjdi4f7lCF2m4t9yzy0hG4U%3D]
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000696.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635409&Signature=Z9FgQffulnZ%2Bi0VZX4Gh0bBUOH0%3D]
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000693.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635409&Signature=DjWjn3FLlcQFBDQWYlEg9bbnVmk%3D]
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:30 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:51 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:51 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:52 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-17 17:23:52 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:23:52 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(81) -totalRecordCount: 23
+2018-05-17 17:23:52 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -pageCount: 1
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(94) -PageRecordCount: 23
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000697.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635432&Signature=reoYIOf8H0wk2Gj8TjclSM9ibGk%3D]
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000693.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635432&Signature=IDmsw%2BUpW2b8wOVtJ073%2BW2iUi4%3D]
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000696.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635432&Signature=xRRxi8JMAuhx972lxCJXl8H63Mw%3D]
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000700.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635432&Signature=aKOXuz9bGrfkwnBkHfH2QrLSGPk%3D]
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:53 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(181) -文件大小为524298240
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:23:54 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:25:38 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:25:38 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:25:39 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-17 17:25:39 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(81) -totalRecordCount: 23
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -pageCount: 1
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(94) -PageRecordCount: 23
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000700.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635540&Signature=l7FqZso7gJijKhd2OOfCpu8gDKs%3D]
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000694.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635540&Signature=OlG0fWMcl4Gj8fG%2BREo%2FdyRjPEM%3D]
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000696.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635540&Signature=ZqdCHUNEUS1DB089mi0mMDFRoY4%3D]
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000693.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635540&Signature=u3oDkAwbsWZkusN4iWEzLjSyusw%3D]
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:25:40 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:29:33 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:29:33 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:29:34 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(81) -totalRecordCount: 23
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -pageCount: 1
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(94) -PageRecordCount: 23
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(72) -file size: 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000693.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635775&Signature=V9nGYf1pXnLD0kCrMurrOW4aVJo%3D]
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000696.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635775&Signature=Y80ojwPsDETQa49nePpwx0Pz59M%3D]
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000700.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635775&Signature=GUaPfIp7I%2Fyc%2B%2B0bFGiUkSeO4Zc%3D]
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(73) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000694.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526635775&Signature=O4F0sqm%2FXFtd%2B7VhWGOwFDI9Dsk%3D]
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(180) -文件大小为524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread0, start= 0,  end= 174766080
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread1, start= 174766080,  end= 349532160
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=0-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.DownLoad -DownLoad.java(101) -Thread2, start= 349532160,  end= 524298240
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=174766080-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
+2018-05-17 17:29:35 [ INFO] - com.treefinance.binlog.process.FileSplitFetch -FileSplitFetch.java(70) -bytes=349532160-
