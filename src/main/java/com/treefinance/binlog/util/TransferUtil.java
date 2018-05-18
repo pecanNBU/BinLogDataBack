@@ -94,14 +94,22 @@ public class TransferUtil {
         }
 
         //启动分段下载子线程
-        if (fileSplit instanceof FileSplitFetch) {
+        fileSplits = new FileSplitFetch[startPos.length];
+        for (int i = 0; i < startPos.length; i++) {
+            System.out.println(startPos[i] + " " + endPos[i]);
+            fileSplits[i] = new FileSplitFetch(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
+                    splitInfo.getFileName());
+            LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
+            new Thread(fileSplits[i]).start();
+        }
+        /*if (fileSplit instanceof FileSplitFetch) {
             fileSplits = new FileSplitFetch[startPos.length];
             for (int i = 0; i < startPos.length; i++) {
                 System.out.println(startPos[i] + " " + endPos[i]);
                 fileSplits[i] = new FileSplitFetch(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
                         splitInfo.getFileName());
                 LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-                new Thread(String.valueOf(fileSplits[i])).start();
+                new Thread(fileSplits[i]).start();
             }
         } else {
             fileSplits = new FileSplitPush[startPos.length];
@@ -112,11 +120,10 @@ public class TransferUtil {
                 LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
                 new Thread(String.valueOf(fileSplits[i])).start();
             }
-        }
+        }*/
         //保存文件下载信息
         saveInfo();
-        //循环判断所有文件
-        // 是否下载完毕
+        //循环判断所有文件是否下载完毕
         boolean breakWhile;
         while (!stop) {
             sleep(500);

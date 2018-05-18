@@ -1,6 +1,7 @@
 package com.treefinance.binlog.bean;
 
 
+import com.treefinance.binlog.util.FileUtil;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;

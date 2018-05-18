@@ -12,6 +12,7 @@ import java.util.Properties;
 public class FileUtil {
     private static Logger LOG = Logger.getLogger(FileUtil.class);
     private RandomAccessFile file;
+    private long startPos;
 
     private static boolean strIsRight(String str) {
         return null != str && str.length() > 0;
@@ -42,6 +43,7 @@ public class FileUtil {
 
     /**
      * 读取配置文件
+     *
      * @return Properties
      */
     public static Properties getProperties() {
@@ -57,12 +59,14 @@ public class FileUtil {
 
     /**
      * 设置文件存储开始位置
+     *
      * @param filePath 文件名
      * @param startPos 文件存储的起始位置
      */
     public FileUtil(String filePath, long startPos) {
         try {
             file = new RandomAccessFile(filePath, "rw");
+            this.startPos = startPos;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -73,11 +77,16 @@ public class FileUtil {
         }
     }
 
+    public FileUtil(String filePath, String fileName) {
+
+    }
+
     /**
      * 写数据操作
-     * @param data 字节数组
+     *
+     * @param data  字节数组
      * @param start 开始位置
-     * @param len 结束位置
+     * @param len   结束位置
      * @return len 表示是否写入成功
      */
     public synchronized int write(byte[] data, int start, int len) {

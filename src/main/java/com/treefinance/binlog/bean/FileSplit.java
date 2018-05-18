@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 /**
  * @author personalc
  */
-public abstract class FileSplit implements Serializable {
+public abstract class FileSplit implements Serializable,Runnable {
     private static Logger LOG = Logger.getLogger(FileSplit.class);
     /**
      * 文件所在src
@@ -52,7 +52,7 @@ public abstract class FileSplit implements Serializable {
         this.startPos = startPos;
         this.endPos = endPos;
         this.threadID = threadID;
-        fileUtil = new FileUtil(dest + File.separator + fileName, startPos);
+        fileUtil = new FileUtil(dest+File.separator+fileName, startPos);
     }
 
     public FileSplit() {

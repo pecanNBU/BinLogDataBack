@@ -534,3 +534,587 @@
 2018-05-17 10:18:46 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 524298240
 2018-05-17 10:18:46 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4332347/mysql-bin.000702.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526609925&Signature=PfNKkZ0RCC1pPXIGfxux31u7HKM%3D]
 2018-05-17 10:20:45 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 524298240
+2018-05-18 14:09:44 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:09:44 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:09:45 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 14:09:46 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:09:46 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 14:09:46 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:09:47 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 14:09:47 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:09:47 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 14:09:47 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 14:09:47 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:09:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 14:09:48 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 14:09:48 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526710188&Signature=gV3AU%2BxeSMkqbIBry55pzaGSTKo%3D]
+2018-05-18 14:09:48 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(192) -文件大小为1187840
+2018-05-18 14:09:48 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 14:11:44 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:11:44 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:11:45 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 14:11:46 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:11:48 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 14:11:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:11:49 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 14:11:49 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 14:11:49 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526710309&Signature=Z%2FNB6zvhC1XTdvJ97Y7xRS6WW5U%3D]
+2018-05-18 14:11:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(192) -文件大小为1187840
+2018-05-18 14:11:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 14:33:29 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:33:29 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:33:30 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 14:33:30 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:33:31 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 14:33:31 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(31) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 14:33:32 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 14:33:32 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:33:32 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526711613&Signature=%2BZnupL4OMWEVLt0ZPj1JGVwQkEw%3D]
+2018-05-18 14:33:33 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:01:41 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:01:41 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:01:41 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:01:42 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:01:43 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:01:43 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:01:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 15:01:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:01:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 15:01:44 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:01:44 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:01:45 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:01:45 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 15:01:45 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526713304&Signature=z40jKkL1JE4gKwroqdlPSBjmBrI%3D]
+2018-05-18 15:01:45 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:37:05 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:37:05 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:37:06 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:37:07 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:37:07 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:37:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:37:09 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:37:09 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 15:37:09 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526715429&Signature=%2FbvUlTTHOWOCKUWHNuRe6dKSdBE%3D]
+2018-05-18 15:38:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:41:08 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:41:08 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:41:09 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:41:10 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:41:10 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:41:10 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:41:11 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 15:41:11 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:41:11 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 15:41:11 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:41:11 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:41:12 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:41:12 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 15:41:12 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526715672&Signature=cu5%2BWQJkoWRgxBo66KpqlZ6pC08%3D]
+2018-05-18 15:45:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(103) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:50:37 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:50:37 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:50:37 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:50:38 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:50:42 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:50:42 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:50:42 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 15:50:42 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:50:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 15:50:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:50:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:50:43 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:50:44 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 15:50:44 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716243&Signature=%2FnLHMrWgxsqNdyaHOKhSGTlwZUY%3D]
+2018-05-18 15:50:44 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:50:44 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:01 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:52:01 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:52:02 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:52:02 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:52:03 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:52:03 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:52:03 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 23
+2018-05-18 15:52:03 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:04 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 23
+2018-05-18 15:52:04 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:04 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:05 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:05 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1187840
+2018-05-18 15:52:05 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=rcF5cCZfhq16Ra7ChFzjVSFuszk%3D]
+2018-05-18 15:52:05 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 1187840
+2018-05-18 15:52:05 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000231.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=rcF5cCZfhq16Ra7ChFzjVSFuszk%3Dsuccessfully
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000230.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=oRUfeit51M9I61e9nKvKQebF8kU%3D]
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:06 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000230.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=oRUfeit51M9I61e9nKvKQebF8kU%3Dsuccessfully
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 532480
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000229.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=8hIXL3wXOmoH1Hh7CZcPPAsk0Ro%3D]
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为532480
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 532480
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000229.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=8hIXL3wXOmoH1Hh7CZcPPAsk0Ro%3Dsuccessfully
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 942080
+2018-05-18 15:52:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000228.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=ZySSN395UXD76uVLh9%2FuJHKe%2FHw%3D]
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为942080
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 942080
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000228.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=ZySSN395UXD76uVLh9%2FuJHKe%2FHw%3Dsuccessfully
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 808960
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000227.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=%2Fe9JylG983aFj9viqqbLHzAsn1M%3D]
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为808960
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 808960
+2018-05-18 15:52:08 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5402517/hostins4228589/mysql-bin.000227.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716325&Signature=%2Fe9JylG983aFj9viqqbLHzAsn1M%3Dsuccessfully
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:09 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:10 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:10 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000070.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=d%2FkEtvX7r3tlSCGXfFb7J7mOoDM%3D]
+2018-05-18 15:52:10 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:10 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:10 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000070.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=d%2FkEtvX7r3tlSCGXfFb7J7mOoDM%3Dsuccessfully
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000069.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=h%2FCY6gUq7BUY7%2Bibi2ogus6T4oY%3D]
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000069.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=h%2FCY6gUq7BUY7%2Bibi2ogus6T4oY%3Dsuccessfully
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000068.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=L9sTVO8rp6pvbn7Do7OhL33%2F5Ig%3D]
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000068.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=L9sTVO8rp6pvbn7Do7OhL33%2F5Ig%3Dsuccessfully
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 552960
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000067.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=nU5b7FGJgcvMYMJB%2F%2FCzjimrdP8%3D]
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为552960
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 552960
+2018-05-18 15:52:12 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000067.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=nU5b7FGJgcvMYMJB%2F%2FCzjimrdP8%3Dsuccessfully
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000066.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=SHbnhaWEpM3Dv%2BE0t3CNWDYn5Jc%3D]
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:13 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5085113/hostins4500933/mysql-bin.000066.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716329&Signature=SHbnhaWEpM3Dv%2BE0t3CNWDYn5Jc%3Dsuccessfully
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:14 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000155.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=5hDEAu2TrOUj2Lxazr7nAUkdE4I%3D]
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000155.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=5hDEAu2TrOUj2Lxazr7nAUkdE4I%3Dsuccessfully
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000154.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=sE5FXRT3dysrMu%2FxL%2Fdp%2FM%2F2hTs%3D]
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:15 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000154.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=sE5FXRT3dysrMu%2FxL%2Fdp%2FM%2F2hTs%3Dsuccessfully
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000153.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=JY9Pgj1zbASPh39bJaLVJMDkoBs%3D]
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000153.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=JY9Pgj1zbASPh39bJaLVJMDkoBs%3Dsuccessfully
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000152.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=6teV8B9LD6FtpqSt2OYTyUdmBvQ%3D]
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 501760
+2018-05-18 15:52:16 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000152.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=6teV8B9LD6FtpqSt2OYTyUdmBvQ%3Dsuccessfully
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000151.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=%2BaL9GQuVNfMKxcPK1GIQAZrcrP4%3D]
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:17 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5044869/hostins4355593/mysql-bin.000151.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716334&Signature=%2BaL9GQuVNfMKxcPK1GIQAZrcrP4%3Dsuccessfully
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=vvyZVZplJWACG4n9A0u2CIUe6fs%3D]
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:18 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=vvyZVZplJWACG4n9A0u2CIUe6fs%3Dsuccessfully
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=by%2F5Xb80AorriNS1gh5kFgi5Sfk%3D]
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:19 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=by%2F5Xb80AorriNS1gh5kFgi5Sfk%3Dsuccessfully
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=wA6cjxu%2Fg0ZmxxSSXFOeAEtIGqA%3D]
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=wA6cjxu%2Fg0ZmxxSSXFOeAEtIGqA%3Dsuccessfully
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=vLZm4qqTfsRxRZfXK%2BRPkdIgNn0%3D]
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:20 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=vLZm4qqTfsRxRZfXK%2BRPkdIgNn0%3Dsuccessfully
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 522240
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=7%2B8yRiiVXwVLZ8IeyhRKsbfpZ8g%3D]
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为522240
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 522240
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040113/hostins3882513/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716338&Signature=7%2B8yRiiVXwVLZ8IeyhRKsbfpZ8g%3Dsuccessfully
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:21 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=JLFanvoOAgUwRBKPjE87pLizlb4%3D]
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:22 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=JLFanvoOAgUwRBKPjE87pLizlb4%3Dsuccessfully
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=JFzYjyBWhhDpynNYFwfg6ZjHz6U%3D]
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=JFzYjyBWhhDpynNYFwfg6ZjHz6U%3Dsuccessfully
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=TLbKbmdocsgTsbFryQGp5GEiZJo%3D]
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:23 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=TLbKbmdocsgTsbFryQGp5GEiZJo%3Dsuccessfully
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=VSIySAjiCWOnSyaBz5ZamcmEDuo%3D]
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=VSIySAjiCWOnSyaBz5ZamcmEDuo%3Dsuccessfully
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=ZxF%2BEDnFqCQ83Cfzfwy7oZrVOfY%3D]
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040111/hostins3882509/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716342&Signature=ZxF%2BEDnFqCQ83Cfzfwy7oZrVOfY%3Dsuccessfully
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:25 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:26 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:26 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=LHAdhLTC8%2BfuIPp1jNrUQfaAJlo%3D]
+2018-05-18 15:52:26 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:26 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:26 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=LHAdhLTC8%2BfuIPp1jNrUQfaAJlo%3Dsuccessfully
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=ftraKs%2FhhN25jdtQnr8%2Fx2EK5A8%3D]
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=ftraKs%2FhhN25jdtQnr8%2Fx2EK5A8%3Dsuccessfully
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=k2c%2BRsv1d0ftAQnVzbuo6hx6t%2F4%3D]
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:27 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=k2c%2BRsv1d0ftAQnVzbuo6hx6t%2F4%3Dsuccessfully
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=4fumwOp6l8WFQE%2BMgm1lsZb5m5I%3D]
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:28 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=4fumwOp6l8WFQE%2BMgm1lsZb5m5I%3Dsuccessfully
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 368640
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=QmVXu73pm0Zy%2B8jwcdeA8uJTYtg%3D]
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为368640
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 368640
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040109/hostins3882503/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716345&Signature=QmVXu73pm0Zy%2B8jwcdeA8uJTYtg%3Dsuccessfully
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:29 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=q0AnqlQF2drBbsJFbftizLL5cqY%3D]
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:31 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000518.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=q0AnqlQF2drBbsJFbftizLL5cqY%3Dsuccessfully
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=NHQDHg4gknpJJQRQZYMLx1myks8%3D]
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000517.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=NHQDHg4gknpJJQRQZYMLx1myks8%3Dsuccessfully
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=5id4RJ0uLIEgGgnZAT3niwYFxaI%3D]
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:32 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000516.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=5id4RJ0uLIEgGgnZAT3niwYFxaI%3Dsuccessfully
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=ScCcpHlVJZfgqfnHSml2cHTdklg%3D]
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000515.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=ScCcpHlVJZfgqfnHSml2cHTdklg%3Dsuccessfully
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 512000
+2018-05-18 15:52:33 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=I%2F%2BwWlAyaRRm58g4CctUNR%2B6Fq8%3D]
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为512000
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 512000
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5040105/hostins3882497/mysql-bin.000514.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716349&Signature=I%2F%2BwWlAyaRRm58g4CctUNR%2B6Fq8%3Dsuccessfully
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:52:34 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:52:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 46305280
+2018-05-18 15:52:35 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000066.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=ZjSJ8zjtLGqNbyg0YyH5KOsLgMM%3D]
+2018-05-18 15:52:35 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为46305280
+2018-05-18 15:52:35 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 46305280
+2018-05-18 15:52:35 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000066.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=ZjSJ8zjtLGqNbyg0YyH5KOsLgMM%3Dsuccessfully
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 19343360
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000065.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=L3EIZEkcA%2Fw4uKOpURsxnnDIvwA%3D]
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为19343360
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 19343360
+2018-05-18 15:52:50 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:52:58 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:52:58 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:52:58 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000065.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=L3EIZEkcA%2Fw4uKOpURsxnnDIvwA%3Dsuccessfully
+2018-05-18 15:52:58 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 15831040
+2018-05-18 15:52:58 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000064.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=cBAMKJVip2HBJ0cpi%2FCom3l65g0%3D]
+2018-05-18 15:52:59 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为15831040
+2018-05-18 15:52:59 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 15831040
+2018-05-18 15:52:59 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000064.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=cBAMKJVip2HBJ0cpi%2FCom3l65g0%3Dsuccessfully
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 54958080
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000063.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=Cz6rztqukHTTJTuLgheurSG1Srw%3D]
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为54958080
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 54958080
+2018-05-18 15:53:06 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000063.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=Cz6rztqukHTTJTuLgheurSG1Srw%3Dsuccessfully
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 46540800
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000062.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=lMF1ohRCG4pRysUPb1fTiUCwung%3D]
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为46540800
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 46540800
+2018-05-18 15:53:24 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:53:35 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5015713/hostins4503501/mysql-bin.000062.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716354&Signature=lMF1ohRCG4pRysUPb1fTiUCwung%3Dsuccessfully
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 89640960
+2018-05-18 15:53:36 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000634.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=o9b6pzvRxV8fhMUEPe4RxunaLow%3D]
+2018-05-18 15:53:37 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为89640960
+2018-05-18 15:53:37 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 89640960
+2018-05-18 15:53:37 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000634.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=o9b6pzvRxV8fhMUEPe4RxunaLow%3Dsuccessfully
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 5406720
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000633.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=L72z2boXQQw15y9X5Aajp1VmwZY%3D]
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为5406720
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 5406720
+2018-05-18 15:54:11 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000633.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=L72z2boXQQw15y9X5Aajp1VmwZY%3Dsuccessfully
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 41748480
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000632.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=TMhbmGeXA10Zpfr1v1W2UQglUEA%3D]
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为41748480
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 41748480
+2018-05-18 15:54:13 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000632.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=TMhbmGeXA10Zpfr1v1W2UQglUEA%3Dsuccessfully
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 43909120
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000631.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=pCIZCsDajI9GKkhL%2BCvj2ceNTWI%3D]
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为43909120
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 43909120
+2018-05-18 15:54:32 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000631.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=pCIZCsDajI9GKkhL%2BCvj2ceNTWI%3Dsuccessfully
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 105185280
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000630.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=H4UiKglaV6CPIDWKEoCqqxIuwTk%3D]
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为105185280
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 105185280
+2018-05-18 15:54:52 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4965695/hostins3801005/mysql-bin.000630.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716416&Signature=H4UiKglaV6CPIDWKEoCqqxIuwTk%3Dsuccessfully
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 15124480
+2018-05-18 15:55:49 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000643.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=KQKLkJ%2B9ltDmyfW7hHQXoY3LCmU%3D]
+2018-05-18 15:55:50 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为15124480
+2018-05-18 15:55:50 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 15124480
+2018-05-18 15:55:50 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000643.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=KQKLkJ%2B9ltDmyfW7hHQXoY3LCmU%3Dsuccessfully
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 573440
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000642.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=W1kXemTuZYRKIi5QeCWxP9bWa%2BU%3D]
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为573440
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 573440
+2018-05-18 15:55:53 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000642.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=W1kXemTuZYRKIi5QeCWxP9bWa%2BU%3Dsuccessfully
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 1423360
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000641.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=FivZ1sy8Fih8GDnIoCVgEV39BZE%3D]
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为1423360
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 1423360
+2018-05-18 15:55:54 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000641.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=FivZ1sy8Fih8GDnIoCVgEV39BZE%3Dsuccessfully
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 17950720
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000640.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=JQpRsjlHlkf25ayEeQmiO%2FUdbAU%3D]
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为17950720
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 17950720
+2018-05-18 15:55:55 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000640.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=JQpRsjlHlkf25ayEeQmiO%2FUdbAU%3Dsuccessfully
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 16721920
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000639.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=Rg2%2ByARMyvSDIx5P1zXeL6gDV7E%3D]
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为16721920
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 16721920
+2018-05-18 15:56:02 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:56:08 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 15:56:08 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 15:56:08 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4892733/hostins3716815/mysql-bin.000639.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716549&Signature=Rg2%2ByARMyvSDIx5P1zXeL6gDV7E%3Dsuccessfully
+2018-05-18 15:56:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 17
+2018-05-18 15:56:08 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:56:09 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 17
+2018-05-18 15:56:10 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 304373760
+2018-05-18 15:56:10 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins4872435/hostins4594755/mysql-bin.000007.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716569&Signature=YVCCaGQpEjCM33YDyS%2B5yKr3eCo%3D]
+2018-05-18 15:56:10 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为304373760
+2018-05-18 15:56:10 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 304373760
+2018-05-18 15:56:10 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 15:57:45 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:57:45 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:57:45 [ WARN] - org.apache.hadoop.util.NativeCodeLoader -NativeCodeLoader.java(62) -Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-05-18 15:57:46 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:57:47 [ INFO] - com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse$DBInstance -DBInstanceUtil.java(72) -pageCount: 1
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.util.FileUtil -FileUtil.java(32) -Load resource file:/Users/personalc/project/BinLogProcess/target/classes/instance.properties successful!
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(84) -totalRecordCount: 10
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(87) -pageCount: 1
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.util.BinLogFileUtil -BinLogFileUtil.java(97) -PageRecordCount: 10
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 524298240
+2018-05-18 15:57:48 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4604515/mysql-bin.000010.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716668&Signature=ze6y7KUcD3Yx2Umb4V1e3jHoP6k%3D]
+2018-05-18 15:57:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为524298240
+2018-05-18 15:57:49 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 524298240
+2018-05-18 15:57:49 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4604515/mysql-bin.000010.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716668&Signature=ze6y7KUcD3Yx2Umb4V1e3jHoP6k%3Dsuccessfully
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 524298240
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4604515/mysql-bin.000009.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716668&Signature=zwF2z1BYR7pnkmcxv5rmH5zTev0%3D]
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为524298240
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 524298240
+2018-05-18 16:00:53 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(48) -Thread0 is done
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(142) -文件下载完成
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(100) -download binlog file :http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4604515/mysql-bin.000009.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716668&Signature=zwF2z1BYR7pnkmcxv5rmH5zTev0%3Dsuccessfully
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(78) -file size: 524308480
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.process.BinLogTransfer -BinLogTransfer.java(79) -begin download binlog file :[http://rdslog-hangzhou-finance.oss-cn-hzfinance.aliyuncs.com/custins5473421/hostins4604515/mysql-bin.000008.tar?OSSAccessKeyId=LTAITfQ7krsrEwRn&Expires=1526716668&Signature=PvBj%2Fm0RKYypDjLgNWTCEDqosZQ%3D]
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(199) -文件大小为524308480
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.util.TransferUtil -TransferUtil.java(102) -Thread0, start= 0,  end= 524308480
+2018-05-18 16:03:07 [ INFO] - com.treefinance.binlog.bean.FileSplitFetch -FileSplitFetch.java(39) -bytes=0-

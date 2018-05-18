@@ -94,8 +94,8 @@ public class BinLogTransfer {
                         TransferUtil transferUtilDown = new TransferUtil(splitInfo, ".tmp");
                         transferUtilDown.startTrans(fileSplitFetch);
                         SplitInfo hdfsFileInfo = new SplitInfo(filePath, HDFS_PATH, fileName, 1);
-                        TransferUtil transferUtilUp = new TransferUtil(hdfsFileInfo, "_up.tmp");
-                        transferUtilUp.startTrans(fileSplitPush);
+                        /*TransferUtil transferUtilUp = new TransferUtil(hdfsFileInfo, "_up.tmp");
+                        transferUtilUp.startTrans(fileSplitPush);*/
                         BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
                         LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
                         // TODO: 2018/5/15 此处添加将文件地址发送队列操作
