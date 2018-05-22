@@ -19,13 +19,13 @@ public class FileSplitPush extends FileSplit implements Runnable {
 
     private FileSystem fs = HDFSFileUtil.fileSystem;
 
-    private static Configuration conf = HDFSFileUtil.configuration;
+    private static Configuration conf = HDFSFileUtil.conf;
 
     private FileSystem local;
 
 
-    public FileSplitPush(String src, String dest, long startPos, long endPos, int threadID, String fileName) {
-        super(src, dest, startPos, endPos, threadID, fileName);
+    public FileSplitPush(String src, String tempPath, String dest, long startPos, long endPos, int threadID, String fileName) {
+        super(src, tempPath, dest, startPos, endPos, threadID, fileName);
     }
 
     public FileSplitPush() {

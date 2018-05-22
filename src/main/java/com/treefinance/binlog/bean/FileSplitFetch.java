@@ -18,8 +18,8 @@ import java.net.URL;
 public class FileSplitFetch  extends FileSplit implements Runnable{
     private static Logger LOG = Logger.getLogger(FileSplitFetch.class);
 
-    public FileSplitFetch(String src, String dest, long startPos, long endPos, int threadID, String fileName) {
-        super(src, dest, startPos, endPos, threadID, fileName);
+    public FileSplitFetch(String src, String tempPath, String dest, long startPos, long endPos, int threadID, String fileName) {
+        super(src, tempPath, dest, startPos, endPos, threadID, fileName);
     }
 
     public FileSplitFetch() {

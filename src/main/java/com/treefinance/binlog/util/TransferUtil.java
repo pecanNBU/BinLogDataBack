@@ -1,9 +1,6 @@
 package com.treefinance.binlog.util;
 
-import com.treefinance.binlog.bean.SplitInfo;
-import com.treefinance.binlog.bean.FileSplit;
-import com.treefinance.binlog.bean.FileSplitFetch;
-import com.treefinance.binlog.bean.FileSplitPush;
+import com.treefinance.binlog.bean.*;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -27,15 +24,15 @@ public class TransferUtil {
     /**
      * 开始位置
      */
-    private static long[] startPos;
+    private long[] startPos;
     /**
      * 结束位置
      */
-    private static long[] endPos;
+    private long[] endPos;
     /**
      * 多线程分段传输的线程集合
      */
-    private FileSplit[] fileSplits;
+    private FileSplitAll[] fileSplits;
     /**
      * 是否第一次下载文件
      */
@@ -58,9 +55,9 @@ public class TransferUtil {
      * 5. 等待子线程的返回
      */
 
-    public TransferUtil(SplitInfo splitInfo, String fileType) {
+    public TransferUtil(SplitInfo splitInfo) {
         this.splitInfo = splitInfo;
-        infoFile = new File(splitInfo.getDestPath() + File.separator + splitInfo.getSimpleName() + fileType);
+        infoFile = new File(splitInfo.getTempPath() + File.separator + splitInfo.getSimpleName() + ".tmp");
         if (infoFile.exists()) {
             firstDown = false;
             readInfo();
@@ -94,39 +91,21 @@ public class TransferUtil {
         }
 
         //启动分段下载子线程
-        fileSplits = new FileSplitFetch[startPos.length];
+        fileSplits = new FileSplitAll[startPos.length];
         for (int i = 0; i < startPos.length; i++) {
             System.out.println(startPos[i] + " " + endPos[i]);
-            fileSplits[i] = new FileSplitFetch(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
+            fileSplits[i] = new FileSplitAll(splitInfo.getSrcPath(), splitInfo.getDestPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
                     splitInfo.getFileName());
             LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
+            //fileSplitAll.run();
+            //fileSplits[i].run();
             new Thread(fileSplits[i]).start();
         }
-        /*if (fileSplit instanceof FileSplitFetch) {
-            fileSplits = new FileSplitFetch[startPos.length];
-            for (int i = 0; i < startPos.length; i++) {
-                System.out.println(startPos[i] + " " + endPos[i]);
-                fileSplits[i] = new FileSplitFetch(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
-                        splitInfo.getFileName());
-                LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-                new Thread(fileSplits[i]).start();
-            }
-        } else {
-            fileSplits = new FileSplitPush[startPos.length];
-            for (int i = 0; i < startPos.length; i++) {
-                System.out.println(startPos[i] + " " + endPos[i]);
-                fileSplits[i] = new FileSplitPush(splitInfo.getSrcPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
-                        splitInfo.getFileName());
-                LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-                new Thread(String.valueOf(fileSplits[i])).start();
-            }
-        }*/
-        //保存文件下载信息
         saveInfo();
-        //循环判断所有文件是否下载完毕
+        //保存文件下载信息循环判断所有文件是否下载完毕
         boolean breakWhile;
         while (!stop) {
-            sleep(500);
+            sleep(3000);
             breakWhile = true;
             for (int i = 0; i < startPos.length; i++) {
                 if (!fileSplits[i].over) {
@@ -135,7 +114,7 @@ public class TransferUtil {
                     break;
                 }
             }
-            if (breakWhile) {
+            if (!breakWhile) {
                 break;
             }
         }
@@ -204,7 +183,7 @@ public class TransferUtil {
     /**
      * 读取文件下载保存的信息
      */
-    private static void readInfo() {
+    private void readInfo() {
         try {
             DataInputStream input = new DataInputStream(new FileInputStream(infoFile));
             int count = input.readInt();

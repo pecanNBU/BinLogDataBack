@@ -77,10 +77,6 @@ public class FileUtil {
         }
     }
 
-    public FileUtil(String filePath, String fileName) {
-
-    }
-
     /**
      * 写数据操作
      *

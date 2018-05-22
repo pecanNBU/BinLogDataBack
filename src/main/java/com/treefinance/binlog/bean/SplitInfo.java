@@ -15,6 +15,10 @@ public class SplitInfo implements Serializable {
      */
     private String srcPath;
     /**
+     * 临时文件目录
+     */
+    private String tempPath;
+    /**
      * 文件保存的路径
      */
     private String destPath;
@@ -28,11 +32,12 @@ public class SplitInfo implements Serializable {
     private int splits;
 
     public SplitInfo() {
-        this("", "", "", SPLIT_COUNT);
+        this("", "", "", "", SPLIT_COUNT);
     }
 
-    public SplitInfo(String srcPath, String destPath, String fileName, int splits) {
+    public SplitInfo(String srcPath, String tempPath, String destPath, String fileName, int splits) {
         this.srcPath = srcPath;
+        this.tempPath = tempPath;
         this.destPath = destPath;
         this.fileName = fileName;
         this.splits = splits;
@@ -74,9 +79,18 @@ public class SplitInfo implements Serializable {
         this.splits = splits;
     }
 
+    public String getTempPath() {
+        return tempPath;
+    }
+
+    public void setTempPath(String tempPath) {
+        this.tempPath = tempPath;
+    }
+
     public String getSimpleName() {
         return fileName.replace(".tar", "");
     }
+
 
 
 }

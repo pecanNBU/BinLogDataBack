@@ -17,9 +17,17 @@ public abstract class FileSplit implements Serializable,Runnable {
      */
     public String src;
     /**
+     * 临时文件路径
+     */
+    public String tempPath;
+    /**
      * 目标路径
      */
     public String dest;
+    /**
+     * 文件名
+     */
+    public String fileName;
     /**
      * 分段传输的开始位置
      */
@@ -46,13 +54,15 @@ public abstract class FileSplit implements Serializable,Runnable {
     public FileUtil fileUtil;
 
 
-    public FileSplit(String src, String dest, long startPos, long endPos, int threadID, String fileName) {
+    public FileSplit(String src, String tempPath, String dest, long startPos, long endPos, int threadID, String fileName) {
         this.src = src;
+        this.tempPath = tempPath;
         this.dest = dest;
+        this.fileName = fileName;
         this.startPos = startPos;
         this.endPos = endPos;
         this.threadID = threadID;
-        fileUtil = new FileUtil(dest+File.separator+fileName, startPos);
+        //fileUtil = new FileUtil(tempPath + File.separator + fileName, startPos);
     }
 
     public FileSplit() {

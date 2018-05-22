@@ -115,18 +115,35 @@ public class BinLogFileUtil {
             file.getParentFile().mkdirs();
         }
         // write
-        FileWriter fw;
+        FileWriter fw = null;
+        BufferedWriter bw = null;
         try {
             file.createNewFile();
             fw = new FileWriter(file, true);
-            BufferedWriter bw = new BufferedWriter(fw);
+            bw = new BufferedWriter(fw);
             String downLoadLink = binLogFile.getDownloadLink();
             bw.write(downLoadLink + "\n");
             bw.flush();
-            bw.close();
-            fw.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        if (bw != null) {
+            try {
+                bw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (fw != null) {
+            try {
+                fw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
