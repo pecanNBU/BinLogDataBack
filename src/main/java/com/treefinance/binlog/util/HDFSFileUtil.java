@@ -1,38 +1,47 @@
 package com.treefinance.binlog.util;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.ContentSummary;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hdfs.DFSConfigKeys;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Properties;
 
 /**
  * @author personalc
  */
 public class HDFSFileUtil {
     private static Logger LOG = Logger.getLogger(BinLogFileUtil.class);
-    public static Configuration configuration = null;
+    private static Properties properties = FileUtil.getProperties();
+    public static Configuration conf = null;
     public static FileSystem fileSystem = null;
-    public static String hdfsPath = null;
+    public static String hdfsPath = properties.getProperty("HDFS_PAHT");
 
     static {
-        try {
-            if (null == configuration) {
-                configuration = new Configuration();
-                configuration.set("dfs.support.append", "true");
-                configuration.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
-                configuration.setBoolean("dfs.client.block.write.replace-datanode-on-failure.enabled", true);
+        if (null == conf) {
+            conf = new Configuration();
+            conf.setBoolean(DFSConfigKeys.DFS_SUPPORT_APPEND_KEY, true);
+            // conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
+            //conf.setBoolean("dfs.client.block.write.replace-datanode-on-failure.enabled", true);
+            conf.setInt(DFSConfigKeys.DFS_NAMENODE_HEARTBEAT_RECHECK_INTERVAL_KEY,
+                    1000);
+            conf.setInt(DFSConfigKeys.DFS_HEARTBEAT_INTERVAL_KEY, 1);
+            conf.setInt(DFSConfigKeys.DFS_CLIENT_SOCKET_TIMEOUT_KEY, 5000);
+        }
+        if (null == fileSystem) {
+            try {
+                fileSystem = FileSystem.get(URI.create(hdfsPath), conf);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            if (null == fileSystem) {
-                fileSystem = FileSystem.get(URI.create(hdfsPath), configuration);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+
         }
     }
 
@@ -79,10 +88,9 @@ public class HDFSFileUtil {
      * 文件检测并删除
      *
      * @param path HDFS文件路径
-     * @param conf HDFS配置
      * @return 检测及删除结果
      */
-    public static boolean checkAndDel(final String path, Configuration conf) {
+    public static boolean checkAndDel(String path) {
         Path dstPath = new Path(path);
         try {
             if (fileSystem.exists(dstPath)) {
@@ -95,6 +103,47 @@ public class HDFSFileUtil {
             return false;
         }
         return true;
+    }
+
+    /**
+     * 获取HDFS文件大小
+     *
+     * @param path
+     * @return
+     */
+    public static long getFileSize(String path) {
+        Path dstPath = new Path(path);
+        try {
+            if (fileSystem.exists(dstPath)) {
+                ContentSummary contentSummary = fileSystem.getContentSummary(dstPath);
+                long fileSize = contentSummary.getLength();
+                return fileSize;
+            } else {
+                return 0;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     *
+     * @param path
+     * @return
+     */
+    public static String getFileCheckSum(String path) {
+        Path dstPath = new Path(path);
+        String checkSum = null;
+        try {
+            if (fileSystem.exists(dstPath)) {
+                checkSum = String.valueOf(fileSystem.getFileChecksum(dstPath));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        return checkSum;
     }
 
     /**
@@ -125,7 +174,7 @@ public class HDFSFileUtil {
 
                 ServletInputStream fos = request.getInputStream();
                 byte[] buffer = new byte[1024];
-                int len = 0;
+                int len;
 
                 while ((len = fos.read(buffer)) != -1) {
                     fsOutputStream.write(buffer, 0, len);
@@ -146,7 +195,7 @@ public class HDFSFileUtil {
                 fsOutputStream2 = fileSystem.append(new Path(dest));
                 ServletInputStream fos2 = request.getInputStream();
                 byte[] buffer = new byte[1024];
-                int len = 0;
+                int len;
                 while ((len = fos2.read(buffer)) != -1) {
                     fsOutputStream2.write(buffer, 0, len);
                     length += len;
@@ -161,5 +210,13 @@ public class HDFSFileUtil {
             // 用户中断上传，传回已接收到的文件长度（记录在偏移量表中，以待用户断线续传时传给用户）
             return length;
         }
+    }
+
+    public static void main(String[] args) {
+        String path="hdfs://master1:8020/pc/rm-bp1p4s8pgekg2di55/4500933/mysql-bin.000086.tar";
+        String checkSum=getFileCheckSum(path);
+        System.out.println(checkSum);
+        long fileSize=getFileSize(path);
+        System.out.println(fileSize);
     }
 }

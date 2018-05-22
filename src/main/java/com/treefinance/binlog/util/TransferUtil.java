@@ -1,19 +1,18 @@
-package com.treefinance.binlog.process;
+package com.treefinance.binlog.util;
 
-
-import com.treefinance.binlog.bean.SplitInfo;
+import com.treefinance.binlog.bean.*;
 import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
 /**
  * @author personalc
  */
-public class DownLoad {
-    private static Logger LOG = Logger.getLogger(DownLoad.class);
+public class TransferUtil {
+    private static Logger LOG = Logger.getLogger(TransferUtil.class);
+
     /**
      * 文件不可访问
      */
@@ -25,15 +24,15 @@ public class DownLoad {
     /**
      * 开始位置
      */
-    private static long[] startPos;
+    private long[] startPos;
     /**
      * 结束位置
      */
-    private static long[] endPos;
+    private long[] endPos;
     /**
      * 多线程分段传输的线程集合
      */
-    private FileSplitFetch[] fileSplitFetchs;
+    private FileSplitAll[] fileSplits;
     /**
      * 是否第一次下载文件
      */
@@ -47,10 +46,18 @@ public class DownLoad {
      */
     private static File infoFile;
 
+    /**
+     * 开始下载文件
+     * 1. 获取文件长度
+     * 2. 分割文件
+     * 3. 实例化分段下载子线程
+     * 4. 启动子线程
+     * 5. 等待子线程的返回
+     */
 
-    public DownLoad(SplitInfo splitInfo) {
-        this.splitInfo= splitInfo;
-        infoFile = new File(splitInfo.getDestPath() + File.separator + splitInfo.getSimpleName() + ".tmp");
+    public TransferUtil(SplitInfo splitInfo) {
+        this.splitInfo = splitInfo;
+        infoFile = new File(splitInfo.getTempPath() + File.separator + splitInfo.getSimpleName() + ".tmp");
         if (infoFile.exists()) {
             firstDown = false;
             readInfo();
@@ -60,16 +67,7 @@ public class DownLoad {
         }
     }
 
-    /**
-     * 开始下载文件
-     * 1. 获取文件长度
-     * 2. 分割文件
-     * 3. 实例化分段下载子线程
-     * 4. 启动子线程
-     * 5. 等待子线程的返回
-     */
-    void startDown() {
-
+    public void startTrans(FileSplit fileSplit) {
         if (firstDown) {
             //文件长度
             long fileLen = getFileSize();
@@ -93,30 +91,30 @@ public class DownLoad {
         }
 
         //启动分段下载子线程
-        fileSplitFetchs = new FileSplitFetch[startPos.length];
+        fileSplits = new FileSplitAll[startPos.length];
         for (int i = 0; i < startPos.length; i++) {
             System.out.println(startPos[i] + " " + endPos[i]);
-            fileSplitFetchs[i] = new FileSplitFetch(splitInfo.getSrcPath(), startPos[i], endPos[i], i,
-                    splitInfo.getDestPath() + File.separator + splitInfo.getFileName());
+            fileSplits[i] = new FileSplitAll(splitInfo.getSrcPath(), splitInfo.getDestPath(), splitInfo.getDestPath(), startPos[i], endPos[i], i,
+                    splitInfo.getFileName());
             LOG.info("Thread" + i + ", start= " + startPos[i] + ",  end= " + endPos[i]);
-            new Thread(fileSplitFetchs[i]).start();
+            //fileSplitAll.run();
+            //fileSplits[i].run();
+            new Thread(fileSplits[i]).start();
         }
-
-        //保存文件下载信息
         saveInfo();
-        //循环判断所有文件是否下载完毕
+        //保存文件下载信息循环判断所有文件是否下载完毕
         boolean breakWhile;
         while (!stop) {
-            sleep(500);
+            sleep(3000);
             breakWhile = true;
             for (int i = 0; i < startPos.length; i++) {
-                if (!fileSplitFetchs[i].downOver) {
+                if (!fileSplits[i].over) {
                     // 还存在未下载完成的线程
                     breakWhile = false;
                     break;
                 }
             }
-            if (breakWhile) {
+            if (!breakWhile) {
                 break;
             }
         }
@@ -131,8 +129,8 @@ public class DownLoad {
             DataOutputStream output = new DataOutputStream(new FileOutputStream(infoFile));
             output.writeInt(startPos.length);
             for (int i = 0; i < startPos.length; i++) {
-                output.writeLong(fileSplitFetchs[i].startPos);
-                output.writeLong(fileSplitFetchs[i].endPos);
+                output.writeLong(fileSplits[i].startPos);
+                output.writeLong(fileSplits[i].endPos);
             }
             output.close();
         } catch (IOException e) {
@@ -185,7 +183,7 @@ public class DownLoad {
     /**
      * 读取文件下载保存的信息
      */
-    static void readInfo() {
+    private void readInfo() {
         try {
             DataInputStream input = new DataInputStream(new FileInputStream(infoFile));
             int count = input.readInt();
@@ -208,11 +206,16 @@ public class DownLoad {
     public void setStop() {
         stop = true;
         for (int i = 0; i < startPos.length; i++) {
-            fileSplitFetchs[i].setSplitTransStop();
+            fileSplits[i].setSplitTransStop();
         }
     }
 
-    static void sleep(int mills) {
+    /**
+     * 休眠时间
+     *
+     * @param mills
+     */
+    public static void sleep(int mills) {
         try {
             Thread.sleep(mills);
         } catch (Exception e) {
@@ -221,4 +224,3 @@ public class DownLoad {
         }
     }
 }
-
