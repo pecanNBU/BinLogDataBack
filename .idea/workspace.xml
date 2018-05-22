@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcc213c0-950b-44db-a1a5-d7a354542a5b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitAllNew.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/ChecksumCRC32.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/TransferUtilNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log4jtest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4jtest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitFetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitFetch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitPush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitPush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/SplitInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/TransInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/process/BinLogTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/HDFSFileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/TransferUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/TransferUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/instance.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/instance.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplitFetch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplitFetch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplitPush.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/FileSplitPush.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/SplitInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/SplitInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/bean/TransInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/BinLogTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/process/BinLogTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/HDFSFileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/HDFSFileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/TransferUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/treefinance/binlog/util/TransferUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/instance.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/instance.properties" afterDir="false" />
-    </list>
+    <list default="true" id="dcc213c0-950b-44db-a1a5-d7a354542a5b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,14 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileSplitAllNew.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileSplitAllNew.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitAllNew.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="42" column="93" lean-forward="true" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
+            <state relative-caret-position="-83">
+              <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -203,7 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/LogUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/NewHDFSUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/FileSplitUpLoadHDFS.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -254,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/BinLogFileUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/util/TransferUtilNew.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitAllNew.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -403,11 +385,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinLogProcess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinLogProcess" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -618,12 +595,12 @@
       <workItem from="1526882281728" duration="8065000" />
       <workItem from="1526890771373" duration="67000" />
       <workItem from="1526890873003" duration="5702000" />
-      <workItem from="1526951972274" duration="13599000" />
+      <workItem from="1526951972274" duration="14164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280313000" />
+    <option name="totallyTimeSpent" value="280878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,8 +625,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.066523604" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.31714284" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2957143" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.31714284" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2957143" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4964789" visible="true" weight="0.23104435" />
@@ -748,13 +725,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/2.7.2/hadoop-common-2.7.2-sources.jar!/org/apache/hadoop/conf/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8280">
-          <caret line="676" column="9" selection-start-line="676" selection-start-column="9" selection-end-line="676" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Demo.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Sample.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Test.java" />
@@ -1094,11 +1064,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/treefinance/binlog/bean/FileSplitAllNew.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="42" column="93" lean-forward="true" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
+        <state relative-caret-position="-83">
+          <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
