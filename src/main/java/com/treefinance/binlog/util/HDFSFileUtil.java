@@ -28,8 +28,8 @@ public class HDFSFileUtil {
         if (null == conf) {
             conf = new Configuration();
             conf.setBoolean(DFSConfigKeys.DFS_SUPPORT_APPEND_KEY, true);
-            // conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
-            //conf.setBoolean("dfs.client.block.write.replace-datanode-on-failure.enabled", true);
+            conf.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
+            conf.setBoolean("dfs.client.block.write.replace-datanode-on-failure.enabled", true);
             conf.setInt(DFSConfigKeys.DFS_NAMENODE_HEARTBEAT_RECHECK_INTERVAL_KEY,
                     1000);
             conf.setInt(DFSConfigKeys.DFS_HEARTBEAT_INTERVAL_KEY, 1);
@@ -213,7 +213,7 @@ public class HDFSFileUtil {
     }
 
     public static void main(String[] args) {
-        String path="hdfs://master1:8020/pc/rm-bp1p4s8pgekg2di55/4500933/mysql-bin.000086.tar";
+        String path="hdfs://master1:8020/pc/rm-bp1p4s8pgekg2di55/4500933/1526834143000-mysql-bin.000086.tar";
         String checkSum=getFileCheckSum(path);
         System.out.println(checkSum);
         long fileSize=getFileSize(path);

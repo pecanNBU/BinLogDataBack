@@ -1,8 +1,6 @@
-package com.treefinance.binlog.bean;
-
+package com.treefinance.binlog.process;
 
 import com.treefinance.binlog.util.HDFSFileUtil;
-import com.treefinance.binlog.util.TransferUtil;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -12,35 +10,60 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
 /**
- * 用于分段传输
- * 使用HTTP协议的首部字段实现
- *
  * @author personalc
  */
-public class FileSplitAll extends FileSplit {
-    private static Logger LOG = Logger.getLogger(FileSplitAll.class);
-    private FileSystem fs = HDFSFileUtil.fileSystem;
+public class TransThread implements Serializable,Runnable {
+    private static Logger LOG = Logger.getLogger(TransThread.class);
+    /**
+     * 文件所在src
+     */
+    public String src;
+    /**
+     * 目标路径
+     */
+    public String dest;
+    /**
+     * 文件名
+     */
+    public String fileName;
+    /**
+     * 分段传输的开始位置
+     */
+    public long startPos;
+    /**
+     * 结束位置
+     */
+    public long endPos;
+    /**
+     * 下载完成标志
+     */
+    public boolean over = false;
 
 
-    public FileSplitAll(String src, String tempPath, String dest, long startPos, long endPos, int threadID, String fileName) {
-        super(src, tempPath, dest, startPos, endPos, threadID, fileName);
+
+    public TransThread(String src, String dest, long startPos, long endPos, String fileName) {
+        this.src = src;
+        this.dest = dest;
+        this.fileName = fileName;
+        this.startPos = startPos;
+        this.endPos = endPos;
     }
 
-    public FileSplitAll() {
-        super();
-    }
+    public TransThread() {
 
+    }
     @Override
     public void run() {
-        while (startPos < endPos && !stop) {
+        while (startPos < endPos && !over) {
             try {
                 URL ourl = new URL(src);
                 HttpURLConnection httpConnection = (HttpURLConnection) ourl.openConnection();
+                //下载starPos以后的数据
                 String prop = "bytes=" + startPos + "-";
                 //设置请求首部字段 RANGE
                 httpConnection.setRequestProperty("RANGE", prop);
@@ -55,12 +78,12 @@ public class FileSplitAll extends FileSplit {
 
                 Path dstPath = new Path(dest + File.separator + fileName);
                 System.out.println(dstPath);
-                fs = HDFSFileUtil.fileSystem;
+                FileSystem fs = HDFSFileUtil.fileSystem;
                 if (!fs.exists(dstPath)) {
                     fs.create(dstPath).close();
                 }
                 while (!recovered && tries > 0) {
-                    while ((((bytes = input.read(b))) > 0) && (startPos < endPos) && !stop) {
+                    while ((((bytes = input.read(b))) > 0) && (startPos < endPos) && !over) {
                         try {
                             FSDataOutputStream out = fs.append(dstPath);
                             out.write(b, 0, bytes);
@@ -81,7 +104,7 @@ public class FileSplitAll extends FileSplit {
                         }
                     }
                 }
-                LOG.info("Thread " + threadID + " is done");
+                LOG.info("Thread " + Thread.currentThread().getName() + " is done");
                 over = true;
             } catch (IOException e) {
                 e.printStackTrace();

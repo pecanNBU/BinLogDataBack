@@ -6,10 +6,7 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesRequest;
 import com.aliyuncs.rds.model.v20140815.DescribeBinlogFilesResponse.BinLogFile;
 import com.aliyuncs.rds.model.v20140815.DescribeDBInstancesResponse.DBInstance;
-import com.treefinance.binlog.bean.FileSplitAll;
-import com.treefinance.binlog.bean.FileSplitFetch;
-import com.treefinance.binlog.bean.FileSplitPush;
-import com.treefinance.binlog.bean.SplitInfo;
+import com.treefinance.binlog.bean.*;
 import com.treefinance.binlog.util.*;
 import org.apache.log4j.Logger;
 
@@ -36,7 +33,6 @@ public class BinLogTransfer {
     private static final String END_TIME = properties.getProperty("END_TIME");
     private static final String HDFS_PATH = properties.getProperty("HDFS_PAHT");
     private static String INSTANCE_ID = null;
-    private static FileSplitAll fileSplitAll = new FileSplitAll();
 
 
     public static void main(String[] args) {
@@ -54,54 +50,53 @@ public class BinLogTransfer {
         List<DBInstance> instances = DBInstanceUtil.getAllPrimaryDBInstance();
         System.out.println(instances.size());
         for (DBInstance dbInstance : instances) {
-            if ("rm-bp1p4s8pgekg2di55".equals(dbInstance.getDBInstanceId())) {
-                binlogFilesRequest.setDBInstanceId(dbInstance.getDBInstanceId());
-                List<BinLogFile> binLogFiles = BinLogFileUtil.getBinLogFiles(client, binlogFilesRequest, profile);
-                INSTANCE_ID = DBInstanceUtil.getBackInstanceId(dbInstance);
-                List<BinLogFile> fileList = binLogFiles.parallelStream()
-                        .filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).collect(Collectors.toList());
-                long instanceLogSize = fileList.size();
-                List<Integer> fileNumList = BinLogFileUtil.getFileNumberFromUrl(fileList, REGEX_PATTERN);
-                fileNumList = fileNumList.stream().sorted().collect(Collectors.toList());
-                for (Integer binId : fileNumList) {
-                    System.out.println(binId);
-                }
-                //判断文件编号是否连续
-                if (fileList.size() > 0) {
-                    int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
-                    if (instanceLogSize == (maxDiff + 1)) {
-                        for (int i = 0; i < fileList.size(); i++) {
-                            BinLogFile binLogFile = fileList.get(i);
-                            System.out.println(binLogFile.getChecksum());
-                            //fileList.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile -> {
-                            LOG.info("file size: " + binLogFile.getFileSize());
-                            LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
-                            String dbInstanceId = dbInstance.getDBInstanceId();
-                            String hostInstanceId = binLogFile.getHostInstanceID();
-                            String filePath = SAVE_PATH +
-                                    File.separator + dbInstanceId
-                                    + File.separator + hostInstanceId;
-                            File file = new File(filePath);
-                            if (!file.exists()) {
-                                file.mkdirs();
-                            }
-                            String LogEndTime = binLogFile.getLogEndTime();
-                            String fileName = BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN);
-                            System.out.println(fileName);
-                            SplitInfo splitInfo = new SplitInfo(binLogFile.getDownloadLink(),
-                                    filePath, HDFS_PATH + File.separator + dbInstanceId
-                                    + File.separator + hostInstanceId,
-                                    BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN), 1);
-                            TransferUtilNew transferUtilDown = new TransferUtilNew(splitInfo);
-                            transferUtilDown.startTrans(fileSplitAll);
-                            BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
-                            LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
-                            // TODO: 2018/5/15 此处添加将文件地址发送队列操作
+
+            binlogFilesRequest.setDBInstanceId(dbInstance.getDBInstanceId());
+            List<BinLogFile> binLogFiles = BinLogFileUtil.getBinLogFiles(client, binlogFilesRequest, profile);
+            INSTANCE_ID = DBInstanceUtil.getBackInstanceId(dbInstance);
+            List<BinLogFile> fileList = binLogFiles.parallelStream()
+                    .filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).collect(Collectors.toList());
+            long instanceLogSize = fileList.size();
+            List<Integer> fileNumList = BinLogFileUtil.getFileNumberFromUrl(fileList, REGEX_PATTERN);
+            fileNumList = fileNumList.stream().sorted().collect(Collectors.toList());
+            for (Integer binId : fileNumList) {
+                System.out.println(binId);
+            }
+            //判断文件编号是否连续
+            if (fileList.size() > 0) {
+                int maxDiff = Math.abs(fileNumList.get(0) - fileNumList.get(fileNumList.size() - 1));
+                if (instanceLogSize == (maxDiff + 1)) {
+                    for (int i = 0; i < fileList.size(); i++) {
+                        BinLogFile binLogFile = fileList.get(i);
+                        System.out.println(binLogFile.getChecksum());
+                        //fileList.parallelStream().filter(binLogFile -> binLogFile.getHostInstanceID().equals(INSTANCE_ID)).forEach(binLogFile -> {
+                        LOG.info("file size: " + binLogFile.getFileSize());
+                        LOG.info("begin download binlog file :" + "[" + binLogFile.getDownloadLink() + "]");
+                        String dbInstanceId = dbInstance.getDBInstanceId();
+                        String hostInstanceId = binLogFile.getHostInstanceID();
+                        String filePath = SAVE_PATH +
+                                File.separator + dbInstanceId
+                                + File.separator + hostInstanceId;
+                        File file = new File(filePath);
+                        if (!file.exists()) {
+                            file.mkdirs();
                         }
-                        //});
-                    } else {
-                        LOG.info("the downloaded binlog files is not complete");
+                        String LogEndTime = binLogFile.getLogEndTime();
+                        Long LogEndTimeStamp = TimeUtil.dealDateFormat(LogEndTime);
+                        String fileName = LogEndTimeStamp + "-" + BinLogFileUtil.getFileNameFromUrl(binLogFile.getDownloadLink(), REGEX_PATTERN);
+                        System.out.println(fileName);
+                        TransInfo transInfo = new TransInfo(binLogFile.getDownloadLink(), HDFS_PATH + File.separator + dbInstanceId
+                                + File.separator + hostInstanceId,
+                                fileName);
+                        TransferProcess transferProcess = new TransferProcess(transInfo);
+                        transferProcess.startTrans();
+                        BinLogFileUtil.saveUrlToText(binLogFile, SAVE_PATH + File.separator + "downLink.txt");
+                        LOG.info("download binlog file :" + binLogFile.getDownloadLink() + "successfully");
+                        // TODO: 2018/5/15 此处添加将文件地址发送队列操作
                     }
+                    //});
+                } else {
+                    LOG.info("the downloaded binlog files is not complete");
                 }
             }
         }
