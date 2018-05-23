@@ -31,7 +31,7 @@ public class BinLogTransfer {
     private static final String BINLOG_ACTION_NAME = properties.getProperty("BINLOG_ACTION_NAME");
     private static final String START_TIME = properties.getProperty("START_TIME");
     private static final String END_TIME = properties.getProperty("END_TIME");
-    private static final String HDFS_PATH = properties.getProperty("HDFS_PAHT");
+    private static final String HDFS_PATH = properties.getProperty("HDFS_PATH");
     private static String INSTANCE_ID = null;
 
 
